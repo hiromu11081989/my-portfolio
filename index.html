@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>○○塗装会社 | 建築総合仕上げ企業</title>
+  <meta name="description" content="○○塗装会社は建築総合仕上げ企業として、外壁塗装・屋上防水・シーリング・内装工事など建築仕上げ工事全般に幅広く対応します。">
+  <meta property="og:title" content="○○塗装会社 | 建築総合仕上げ企業">
+  <meta property="og:description" content="技術は拡大し、企業は進化する。建築仕上げ工事全般に対応する総合仕上げ企業です。">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --color-primary: #1a1a2e;
+      --color-secondary: #0f3460;
+      --color-accent: #2563eb;
+      --color-cta: #f97316;
+      --color-light: #f8fafc;
+      --color-white: #ffffff;
+      --color-text: #333333;
+      --color-text-muted: #666666;
+      --color-border: #e2e8f0;
+      --font-ja: 'Noto Sans JP', sans-serif;
+      --font-en: 'Montserrat', sans-serif;
+      --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      --radius: 8px;
+      --transition: 0.3s ease;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-ja);
+      color: var(--color-text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    /* ===== HEADER ===== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background-color: rgba(26, 26, 46, 0.95);
+      backdrop-filter: blur(8px);
+      transition: background-color var(--transition);
+    }
+
+    .header--scrolled { background-color: rgba(26, 26, 46, 0.99); }
+
+    .header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      height: 70px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header__logo { display: flex; flex-direction: column; line-height: 1.2; }
+
+    .header__logo-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--color-white);
+      letter-spacing: 0.05em;
+    }
+
+    .header__logo-sub {
+      font-size: 0.6rem;
+      color: rgba(255, 255, 255, 0.5);
+      font-family: var(--font-en);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .header__nav { display: flex; align-items: center; gap: 2rem; }
+
+    .header__nav-list { display: flex; align-items: center; gap: 1.5rem; }
+
+    .header__nav-item a {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      position: relative;
+      transition: color var(--transition);
+    }
+
+    .header__nav-item a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: var(--color-cta);
+      transform: scaleX(0);
+      transition: transform var(--transition);
+    }
+
+    .header__nav-item a:hover { color: var(--color-white); }
+    .header__nav-item a:hover::after { transform: scaleX(1); }
+
+    .header__cta {
+      background-color: var(--color-cta);
+      color: var(--color-white);
+      padding: 0.5rem 1.25rem;
+      border-radius: var(--radius);
+      font-size: 0.8rem;
+      font-weight: 700;
+      transition: background-color var(--transition), transform var(--transition);
+    }
+
+    .header__cta:hover { background-color: #ea6c0a; transform: translateY(-1px); }
+
+    .header__hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .header__hamburger-line {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: var(--color-white);
+      transition: transform var(--transition), opacity var(--transition);
+    }
+
+    .header__hamburger.is-open .header__hamburger-line:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .header__hamburger.is-open .header__hamburger-line:nth-child(2) { opacity: 0; }
+
+    .header__hamburger.is-open .header__hamburger-line:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* ===== MOBILE NAV ===== */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--color-primary);
+      z-index: 999;
+      padding: 2rem;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .mobile-nav.is-open { display: flex; }
+
+    .mobile-nav__item a {
+      display: block;
+      color: var(--color-white);
+      font-size: 1.05rem;
+      font-weight: 500;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: color var(--transition);
+    }
+
+    .mobile-nav__item a:hover { color: var(--color-cta); }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      background-color: var(--color-primary);
+    }
+
+    .hero__bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.35;
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      width: 100%;
+    }
+
+    .hero__label {
+      display: block;
+      font-family: var(--font-en);
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      color: var(--color-cta);
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero__title {
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      font-weight: 700;
+      color: var(--color-white);
+      line-height: 1.45;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero__subtitle {
+      font-family: var(--font-en);
+      font-size: clamp(0.85rem, 1.5vw, 1rem);
+      color: rgba(255, 255, 255, 0.6);
+      letter-spacing: 0.2em;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero__btn-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    .hero__scroll {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(255, 255, 255, 0.45);
+      font-size: 0.65rem;
+      font-family: var(--font-en);
+      letter-spacing: 0.2em;
+    }
+
+    .hero__scroll-line {
+      width: 1px;
+      height: 50px;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), transparent);
+      animation: scrollAnim 1.8s ease-in-out infinite;
+    }
+
+    @keyframes scrollAnim {
+      0%   { transform: scaleY(0); transform-origin: top; }
+      49%  { transform: scaleY(1); transform-origin: top; }
+      50%  { transform-origin: bottom; }
+      100% { transform: scaleY(0); transform-origin: bottom; }
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.9rem 2rem;
+      border-radius: var(--radius);
+      font-weight: 700;
+      font-size: 0.9rem;
+      font-family: var(--font-ja);
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: transform var(--transition), box-shadow var(--transition), background-color var(--transition), border-color var(--transition);
+    }
+
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); }
+
+    .btn--primary { background-color: var(--color-cta); color: var(--color-white); }
+    .btn--primary:hover { background-color: #ea6c0a; }
+
+    .btn--outline { background-color: transparent; color: var(--color-white); border-color: rgba(255, 255, 255, 0.5); }
+    .btn--outline:hover { border-color: var(--color-white); }
+
+    .btn--dark { background-color: var(--color-primary); color: var(--color-white); }
+    .btn--dark:hover { background-color: var(--color-secondary); }
+
+    /* ===== SECTION COMMON ===== */
+    .section { padding: 6rem 2rem; }
+    .section--light { background-color: var(--color-light); }
+    .section--dark { background-color: var(--color-primary); color: var(--color-white); }
+
+    .section__inner { max-width: 1200px; margin: 0 auto; }
+
+    .section__header { margin-bottom: 3.5rem; }
+
+    .section__eyebrow {
+      display: block;
+      font-family: var(--font-en);
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .section--dark .section__eyebrow { color: var(--color-cta); }
+
+    .section__title {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .section__desc {
+      margin-top: 1rem;
+      color: var(--color-text-muted);
+      max-width: 580px;
+    }
+
+    .section--dark .section__desc { color: rgba(255, 255, 255, 0.65); }
+
+    /* ===== ABOUT ===== */
+    .about__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about__eyebrow {
+      display: block;
+      font-family: var(--font-en);
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .about__title {
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+
+    .about__body {
+      color: var(--color-text-muted);
+      line-height: 1.9;
+      margin-bottom: 1.25rem;
+    }
+
+    .about__stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+
+    .about__stat {
+      text-align: center;
+      padding: 1.5rem 0.75rem;
+      background-color: var(--color-light);
+      border-radius: var(--radius);
+    }
+
+    .about__stat-num {
+      font-family: var(--font-en);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      line-height: 1;
+    }
+
+    .about__stat-unit {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      margin-top: 0.4rem;
+    }
+
+    .about__image {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .about__image-img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+    }
+
+    /* ===== FEATURES ===== */
+    .features__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+
+    .feature-card {
+      background-color: var(--color-white);
+      border-radius: var(--radius);
+      padding: 2.5rem 2rem;
+      box-shadow: var(--shadow);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-card__icon {
+      width: 56px;
+      height: 56px;
+      background-color: rgba(37, 99, 235, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-card__icon-svg { width: 26px; height: 26px; fill: var(--color-accent); }
+
+    .feature-card__title { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.75rem; }
+
+    .feature-card__text { font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.85; }
+
+    /* ===== WORKS ===== */
+    .works__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+
+    .works__grid .work-card:first-child { grid-column: span 2; }
+
+    .work-card {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .work-card__img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .works__grid .work-card:first-child .work-card__img { height: 380px; }
+
+    .work-card:hover .work-card__img { transform: scale(1.05); }
+
+    .work-card__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26, 26, 46, 0.88) 0%, transparent 55%);
+      transition: background var(--transition);
+    }
+
+    .work-card:hover .work-card__overlay {
+      background: linear-gradient(to top, rgba(26, 26, 46, 0.92) 0%, rgba(26, 26, 46, 0.25) 65%);
+    }
+
+    .work-card__content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem;
+    }
+
+    .work-card__category {
+      display: block;
+      font-family: var(--font-en);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      color: var(--color-cta);
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .work-card__title { font-size: 0.95rem; font-weight: 700; color: var(--color-white); line-height: 1.5; }
+
+    .works__more { text-align: center; margin-top: 3rem; }
+
+    /* ===== NEWS ===== */
+    .news__tabs {
+      display: flex;
+      border-bottom: 2px solid var(--color-border);
+      margin-bottom: 2rem;
+    }
+
+    .news__tab {
+      padding: 0.75rem 1.5rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      font-family: var(--font-ja);
+      color: var(--color-text-muted);
+      cursor: pointer;
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      transition: color var(--transition), border-color var(--transition);
+    }
+
+    .news__tab.is-active { color: var(--color-accent); border-bottom-color: var(--color-accent); }
+
+    .news__list { display: none; }
+    .news__list.is-active { display: block; }
+
+    .news-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .news-item:first-child { border-top: 1px solid var(--color-border); }
+
+    .news-item__date {
+      font-family: var(--font-en);
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      white-space: nowrap;
+      min-width: 78px;
+      padding-top: 0.1rem;
+    }
+
+    .news-item__tag {
+      font-size: 0.68rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 2px;
+      white-space: nowrap;
+    }
+
+    .news-item__tag--info { background-color: rgba(37, 99, 235, 0.1); color: var(--color-accent); }
+    .news-item__tag--recruit { background-color: rgba(249, 115, 22, 0.1); color: var(--color-cta); }
+
+    .news-item__title { font-size: 0.9rem; line-height: 1.65; }
+    .news-item__title a:hover { color: var(--color-accent); text-decoration: underline; }
+
+    .news__more { margin-top: 2rem; text-align: right; }
+
+    .link-arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--color-accent);
+      transition: gap var(--transition);
+    }
+
+    .link-arrow:hover { gap: 0.7rem; }
+
+    .link-arrow__icon { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+    /* ===== RECRUIT ===== */
+    .recruit {
+      padding: 6rem 2rem;
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    }
+
+    .recruit__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .recruit__eyebrow {
+      display: block;
+      font-family: var(--font-en);
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      color: var(--color-cta);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .recruit__title {
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      font-weight: 700;
+      color: var(--color-white);
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+
+    .recruit__body {
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.9;
+      margin-bottom: 2rem;
+    }
+
+    .recruit__img-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    .recruit__img-wrap { border-radius: var(--radius); overflow: hidden; }
+    .recruit__img-wrap:first-child { grid-column: span 2; }
+
+    .recruit__img-wrap img { width: 100%; height: 200px; object-fit: cover; }
+    .recruit__img-wrap:first-child img { height: 250px; }
+
+    /* ===== CONTACT ===== */
+    .contact__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+
+    .contact__info-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.5rem;
+      background-color: var(--color-white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 1rem;
+    }
+
+    .contact__info-icon {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      background-color: rgba(37, 99, 235, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact__info-icon-svg { width: 20px; height: 20px; fill: var(--color-accent); }
+
+    .contact__info-label { font-size: 0.75rem; color: var(--color-text-muted); margin-bottom: 0.3rem; }
+
+    .contact__info-value {
+      font-size: 1.25rem;
+      font-weight: 700;
+      font-family: var(--font-en);
+      color: var(--color-primary);
+    }
+
+    .contact__info-text { font-size: 0.95rem; font-weight: 600; color: var(--color-primary); }
+
+    .contact__form {
+      background-color: var(--color-white);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .form__group { margin-bottom: 1.25rem; }
+
+    .form__label { display: block; font-size: 0.85rem; font-weight: 500; margin-bottom: 0.5rem; }
+
+    .form__required { font-size: 0.7rem; color: #e53e3e; margin-left: 0.25rem; }
+
+    .form__input,
+    .form__select,
+    .form__textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      font-family: var(--font-ja);
+      font-size: 0.9rem;
+      color: var(--color-text);
+      background-color: var(--color-white);
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+
+    .form__input:focus,
+    .form__select:focus,
+    .form__textarea:focus {
+      outline: none;
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+
+    .form__textarea { height: 120px; resize: vertical; }
+
+    .form__submit {
+      width: 100%;
+      padding: 1rem;
+      background-color: var(--color-accent);
+      color: var(--color-white);
+      font-size: 1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      font-family: var(--font-ja);
+      transition: background-color var(--transition), transform var(--transition);
+    }
+
+    .form__submit:hover { background-color: #1d4ed8; transform: translateY(-1px); }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background-color: var(--color-primary);
+      color: rgba(255, 255, 255, 0.65);
+      padding: 4rem 2rem 2rem;
+    }
+
+    .footer__inner { max-width: 1200px; margin: 0 auto; }
+
+    .footer__top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer__brand-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--color-white);
+      margin-bottom: 0.3rem;
+    }
+
+    .footer__brand-sub {
+      font-size: 0.62rem;
+      font-family: var(--font-en);
+      letter-spacing: 0.12em;
+      color: rgba(255, 255, 255, 0.35);
+      margin-bottom: 1rem;
+    }
+
+    .footer__brand-desc { font-size: 0.8rem; line-height: 1.85; margin-bottom: 1.25rem; }
+
+    .footer__brand-tel {
+      font-family: var(--font-en);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--color-white);
+    }
+
+    .footer__brand-hours { font-size: 0.75rem; margin-top: 0.2rem; }
+
+    .footer__nav-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--color-white);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .footer__nav-list { display: flex; flex-direction: column; gap: 0.5rem; }
+
+    .footer__nav-list a { font-size: 0.8rem; transition: color var(--transition); }
+    .footer__nav-list a:hover { color: var(--color-white); }
+
+    .footer__bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer__copy { font-size: 0.75rem; }
+
+    .footer__policy { display: flex; gap: 1.5rem; }
+
+    .footer__policy a { font-size: 0.75rem; transition: color var(--transition); }
+    .footer__policy a:hover { color: var(--color-white); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .header__nav-list { gap: 1rem; }
+
+      .about__grid,
+      .recruit__inner { grid-template-columns: 1fr; gap: 2.5rem; }
+
+      .features__grid { grid-template-columns: 1fr 1fr; }
+
+      .footer__top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+
+    @media (max-width: 768px) {
+      .header__nav { display: none; }
+      .header__hamburger { display: flex; }
+
+      .section { padding: 4rem 1.25rem; }
+
+      .hero__btn-group { flex-direction: column; }
+
+      .features__grid { grid-template-columns: 1fr; }
+
+      .works__grid { grid-template-columns: 1fr; }
+      .works__grid .work-card:first-child { grid-column: span 1; }
+      .works__grid .work-card:first-child .work-card__img { height: 280px; }
+
+      .contact__grid { grid-template-columns: 1fr; }
+
+      .recruit { padding: 4rem 1.25rem; }
+      .recruit__img-grid { grid-template-columns: 1fr; }
+      .recruit__img-wrap:first-child { grid-column: span 1; }
+
+      .footer__top { grid-template-columns: 1fr; gap: 2rem; }
+      .footer__bottom { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header" id="js-header">
+    <div class="header__inner">
+      <a href="#" class="header__logo" aria-label="松尾塗装工務店 トップへ">
+        <span class="header__logo-name">○○塗装会社</span>
+        <span class="header__logo-sub">XX Painting Co., Ltd.</span>
+      </a>
+      <nav class="header__nav" aria-label="グローバルナビゲーション">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="#about">会社案内</a></li>
+          <li class="header__nav-item"><a href="#features">サービス</a></li>
+          <li class="header__nav-item"><a href="#works">施工実績</a></li>
+          <li class="header__nav-item"><a href="#news">お知らせ</a></li>
+          <li class="header__nav-item"><a href="#recruit">採用情報</a></li>
+        </ul>
+        <a href="#contact" class="header__cta">お問い合わせ</a>
+      </nav>
+      <button class="header__hamburger" id="js-hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="js-mobile-nav" aria-label="モバイルナビゲーション">
+    <ul>
+      <li class="mobile-nav__item"><a href="#about">会社案内</a></li>
+      <li class="mobile-nav__item"><a href="#features">サービス</a></li>
+      <li class="mobile-nav__item"><a href="#works">施工実績</a></li>
+      <li class="mobile-nav__item"><a href="#news">お知らせ</a></li>
+      <li class="mobile-nav__item"><a href="#recruit">採用情報</a></li>
+      <li class="mobile-nav__item"><a href="#contact">お問い合わせ</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section class="hero" aria-label="メインビジュアル">
+      <div class="hero__bg">
+        <img
+          class="hero__bg-img"
+          src="https://placehold.co/1920x1080/1a1a2e/ffffff?text=Painting"
+          alt="外壁塗装施工イメージ"
+          width="1920"
+          height="1080"
+        >
+      </div>
+      <div class="hero__content">
+        <span class="hero__label">Eternal Quality for Your Home</span>
+        <h1 class="hero__title">
+          技術と誠実さで、<br>
+          お住まいを長く守る。
+        </h1>
+        <p class="hero__subtitle">Since 1980 &mdash; Yokohama, Kanagawa</p>
+        <div class="hero__btn-group">
+          <a href="#contact" class="btn btn--primary">無料見積もりを依頼する</a>
+          <a href="#works" class="btn btn--outline">施工実績を見る</a>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">
+        <div class="hero__scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section__inner">
+        <div class="about__grid">
+          <div class="about__text">
+            <span class="about__eyebrow">About Us</span>
+            <h2 class="about__title">
+              技術は拡大し、<br>
+              企業は進化する。
+            </h2>
+            <p class="about__body">
+              建築総合仕上げ企業として、お客様のニーズに幅広く対応するため、当社はその事業分野を大きく拡大しています。これまでの事業基盤であった建築塗装業に加えて、実に様々な分野で活動しております。
+            </p>
+            <p class="about__body">
+              現在まで足場仮設、躯体補修左官工事、屋上防水、外壁塗装、シーリング打ち替え工事、造作工事、内装工事、建具工事、金属工事など、躯体関係を除く建築仕上げ工事全般にわたって多くの実績を上げております。
+            </p>
+            <p class="about__body">
+              この業務の拡大と技術力の充実により、当社は建築総合仕上げ企業として、邁進していきます。
+            </p>
+            <a href="#contact" class="btn btn--primary">会社概要を見る</a>
+            <div class="about__stats">
+              <div class="about__stat">
+                <div class="about__stat-num">45年</div>
+                <div class="about__stat-unit">創業年数</div>
+              </div>
+              <div class="about__stat">
+                <div class="about__stat-num">3,000+</div>
+                <div class="about__stat-unit">施工実績</div>
+              </div>
+              <div class="about__stat">
+                <div class="about__stat-num">98%</div>
+                <div class="about__stat-unit">顧客満足度</div>
+              </div>
+            </div>
+          </div>
+          <div class="about__image">
+            <img
+              class="about__image-img"
+              src="https://placehold.co/600x480/334155/ffffff?text=About+Us"
+              alt="職人の施工風景"
+              width="600"
+              height="480"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--light" id="features">
+      <div class="section__inner">
+        <div class="section__header">
+          <span class="section__eyebrow">Our Services</span>
+          <h2 class="section__title">選ばれる3つの理由</h2>
+          <p class="section__desc">技術力・品質・アフターサービスの三本柱で、お客様のご満足をお届けします。</p>
+        </div>
+        <div class="features__grid">
+          <article class="feature-card">
+            <div class="feature-card__icon">
+              <svg class="feature-card__icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">確かな技術力</h3>
+            <p class="feature-card__text">一級塗装技能士をはじめ、国家資格保有の職人が施工。長年の経験と技術で、難しい箇所も丁寧に仕上げます。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-card__icon">
+              <svg class="feature-card__icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">高品質な塗料</h3>
+            <p class="feature-card__text">耐久性・防水性・遮熱性に優れた厳選塗料を使用。建物の状態・環境に合わせた最適な塗料をご提案します。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-card__icon">
+              <svg class="feature-card__icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">充実のアフターサービス</h3>
+            <p class="feature-card__text">施工後10年間の保証制度を完備。定期点検も実施し、長期にわたってお住まいをサポートします。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="works">
+      <div class="section__inner">
+        <div class="section__header">
+          <span class="section__eyebrow">Works</span>
+          <h2 class="section__title">施工実績</h2>
+          <p class="section__desc">これまでに手掛けた代表的な施工事例をご紹介します。</p>
+        </div>
+        <div class="works__grid">
+          <article class="work-card">
+            <img class="work-card__img" src="Untitled1.jpg" alt="横浜市K様邸 外壁・屋根塗装工事" width="800" height="380">
+            <div class="work-card__overlay" aria-hidden="true"></div>
+            <div class="work-card__content">
+              <span class="work-card__category">Exterior Painting</span>
+              <h3 class="work-card__title">横浜市 K様邸<br>外壁・屋根塗装工事</h3>
+            </div>
+          </article>
+          <article class="work-card">
+            <img class="work-card__img" src="Untitled2.jpg" alt="川崎市M様邸 屋根塗装工事" width="390" height="280">
+            <div class="work-card__overlay" aria-hidden="true"></div>
+            <div class="work-card__content">
+              <span class="work-card__category">Roof Painting</span>
+              <h3 class="work-card__title">川崎市 M様邸<br>屋根塗装工事</h3>
+            </div>
+          </article>
+          <article class="work-card">
+            <img class="work-card__img" src="Untitled3.jpg" alt="藤沢市 共同住宅 大規模修繕工事" width="390" height="280">
+            <div class="work-card__overlay" aria-hidden="true"></div>
+            <div class="work-card__content">
+              <span class="work-card__category">Renovation</span>
+              <h3 class="work-card__title">藤沢市 共同住宅<br>大規模修繕工事</h3>
+            </div>
+          </article>
+          <article class="work-card">
+            <img class="work-card__img" src="Untitled1.jpg" alt="相模原市 店舗 外装改修工事" width="390" height="280">
+            <div class="work-card__overlay" aria-hidden="true"></div>
+            <div class="work-card__content">
+              <span class="work-card__category">Commercial</span>
+              <h3 class="work-card__title">相模原市 店舗<br>外装改修工事</h3>
+            </div>
+          </article>
+          <article class="work-card">
+            <img class="work-card__img" src="Untitled2.jpg" alt="横須賀市 工場 屋上防水工事" width="390" height="280">
+            <div class="work-card__overlay" aria-hidden="true"></div>
+            <div class="work-card__content">
+              <span class="work-card__category">Waterproofing</span>
+              <h3 class="work-card__title">横須賀市 工場<br>屋上防水工事</h3>
+            </div>
+          </article>
+        </div>
+        <div class="works__more">
+          <a href="#" class="btn btn--outline">施工実績をすべて見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="news">
+      <div class="section__inner">
+        <div class="section__header">
+          <span class="section__eyebrow">News</span>
+          <h2 class="section__title">お知らせ</h2>
+        </div>
+        <div class="news__tabs" role="tablist">
+          <button class="news__tab is-active" role="tab" aria-selected="true" data-tab="all">すべて</button>
+          <button class="news__tab" role="tab" aria-selected="false" data-tab="info">お知らせ</button>
+          <button class="news__tab" role="tab" aria-selected="false" data-tab="recruit">採用情報</button>
+        </div>
+        <ul class="news__list is-active" id="tab-all" role="tabpanel">
+          <li class="news-item">
+            <time class="news-item__date" datetime="2026-05-01">2026.05.01</time>
+            <span class="news-item__tag news-item__tag--info">お知らせ</span>
+            <div class="news-item__title"><a href="#">GW期間中の営業について（5月3日〜5月6日は休業）</a></div>
+          </li>
+          <li class="news-item">
+            <time class="news-item__date" datetime="2026-04-15">2026.04.15</time>
+            <span class="news-item__tag news-item__tag--recruit">採用情報</span>
+            <div class="news-item__title"><a href="#">2027年度新卒採用エントリー受付開始のお知らせ</a></div>
+          </li>
+          <li class="news-item">
+            <time class="news-item__date" datetime="2026-03-20">2026.03.20</time>
+            <span class="news-item__tag news-item__tag--info">お知らせ</span>
+            <div class="news-item__title"><a href="#">コーポレートサイトをリニューアルしました</a></div>
+          </li>
+          <li class="news-item">
+            <time class="news-item__date" datetime="2026-02-10">2026.02.10</time>
+            <span class="news-item__tag news-item__tag--info">お知らせ</span>
+            <div class="news-item__title"><a href="#">外壁塗装に関するお役立ちコラムを公開しました</a></div>
+          </li>
+          <li class="news-item">
+            <time class="news-item__date" datetime="2026-01-05">2026.01.05</time>
+            <span class="news-item__tag news-item__tag--recruit">採用情報</span>
+            <div class="news-item__title"><a href="#">塗装職人（中途採用）の募集を開始しました</a></div>
+          </li>
+        </ul>
+        <ul class="news__list" id="tab-info" role="tabpanel">
+          <li class="news-item">
+            <time class="news-item__date" datetime="2026-05-01">2026.05.01</time>
+            <span class="news-item__tag news-item__tag--info">お知らせ</span>
+            <div class="news-item__title"><a href="#">GW期間中の営業について（5月3日〜5月6日は休業）</a></div>
+          </li>
+          <li class="news-item">
+            <time class="news-item__date" datetime="2026-03-20">2026.03.20</time>
+            <span class="news-item__tag news-item__tag--info">お知らせ</span>
+            <div class="news-item__title"><a href="#">コーポレートサイトをリニューアルしました</a></div>
+          </li>
+          <li class="news-item">
+            <time class="news-item__date" datetime="2026-02-10">2026.02.10</time>
+            <span class="news-item__tag news-item__tag--info">お知らせ</span>
+            <div class="news-item__title"><a href="#">外壁塗装に関するお役立ちコラムを公開しました</a></div>
+          </li>
+        </ul>
+        <ul class="news__list" id="tab-recruit" role="tabpanel">
+          <li class="news-item">
+            <time class="news-item__date" datetime="2026-04-15">2026.04.15</time>
+            <span class="news-item__tag news-item__tag--recruit">採用情報</span>
+            <div class="news-item__title"><a href="#">2027年度新卒採用エントリー受付開始のお知らせ</a></div>
+          </li>
+          <li class="news-item">
+            <time class="news-item__date" datetime="2026-01-05">2026.01.05</time>
+            <span class="news-item__tag news-item__tag--recruit">採用情報</span>
+            <div class="news-item__title"><a href="#">塗装職人（中途採用）の募集を開始しました</a></div>
+          </li>
+        </ul>
+        <div class="news__more">
+          <a href="#" class="link-arrow">
+            お知らせ一覧へ
+            <svg class="link-arrow__icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="recruit" id="recruit">
+      <div class="recruit__inner">
+        <div class="recruit__text">
+          <span class="recruit__eyebrow">Recruit</span>
+          <h2 class="recruit__title">
+            塗装の未来を、<br>
+            一緒につくりませんか。
+          </h2>
+          <p class="recruit__body">
+            私たちは「塗装」を通じて地域の暮らしを支えてきました。職人の技を次世代に継承しながら、新しい挑戦を続ける仲間を募集しています。未経験からのスタートも大歓迎。一緒に成長しましょう。
+          </p>
+          <a href="#contact" class="btn btn--primary">採用情報を見る</a>
+        </div>
+        <div class="recruit__img-grid">
+          <div class="recruit__img-wrap">
+            <img src="https://placehold.co/600x250/0f3460/ffffff?text=Team" alt="チームの様子" width="600" height="250">
+          </div>
+          <div class="recruit__img-wrap">
+            <img src="https://placehold.co/290x200/0f3460/ffffff?text=Training" alt="研修の様子" width="290" height="200">
+          </div>
+          <div class="recruit__img-wrap">
+            <img src="https://placehold.co/290x200/0f3460/ffffff?text=Work" alt="施工中の様子" width="290" height="200">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--light" id="contact">
+      <div class="section__inner">
+        <div class="section__header">
+          <span class="section__eyebrow">Contact</span>
+          <h2 class="section__title">お問い合わせ</h2>
+          <p class="section__desc">外壁塗装・屋根塗装のご相談、無料見積もりはお気軽にどうぞ。</p>
+        </div>
+        <div class="contact__grid">
+          <div class="contact__info">
+            <div class="contact__info-card">
+              <div class="contact__info-icon">
+                <svg class="contact__info-icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.1 1.14 2 2 0 012.08 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91A16 16 0 0016 17.82l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact__info-label">お電話でのお問い合わせ</div>
+                <div class="contact__info-value">045-XXX-XXXX</div>
+              </div>
+            </div>
+            <div class="contact__info-card">
+              <div class="contact__info-icon">
+                <svg class="contact__info-icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact__info-label">所在地</div>
+                <div class="contact__info-text">〒231-0000 神奈川県横浜市中区○○町1-1</div>
+              </div>
+            </div>
+            <div class="contact__info-card">
+              <div class="contact__info-icon">
+                <svg class="contact__info-icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact__info-label">営業時間</div>
+                <div class="contact__info-text">平日 8:00〜18:00（土曜応相談）</div>
+              </div>
+            </div>
+          </div>
+          <div class="contact__form">
+            <form action="#" method="post" novalidate>
+              <div class="form__group">
+                <label class="form__label" for="name">お名前<span class="form__required">※</span></label>
+                <input class="form__input" type="text" id="name" name="name" placeholder="山田 太郎" required>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="email">メールアドレス<span class="form__required">※</span></label>
+                <input class="form__input" type="email" id="email" name="email" placeholder="example@email.com" required>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="tel">電話番号</label>
+                <input class="form__input" type="tel" id="tel" name="tel" placeholder="090-0000-0000">
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="service">お問い合わせ種別<span class="form__required">※</span></label>
+                <select class="form__select" id="service" name="service" required>
+                  <option value="">選択してください</option>
+                  <option value="exterior">外壁塗装</option>
+                  <option value="roof">屋根塗装</option>
+                  <option value="waterproof">防水工事</option>
+                  <option value="renovation">大規模修繕</option>
+                  <option value="other">その他</option>
+                </select>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="message">お問い合わせ内容</label>
+                <textarea class="form__textarea" id="message" name="message" placeholder="ご質問・ご要望をお書きください"></textarea>
+              </div>
+              <button type="submit" class="form__submit">送信する</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__brand-name">○○塗装会社</div>
+          <div class="footer__brand-sub">XX Painting Co., Ltd.</div>
+          <p class="footer__brand-desc">建築総合仕上げ企業として、外壁塗装・屋上防水・内装工事など建築仕上げ工事全般に幅広く対応しております。技術は拡大し、企業は進化する。</p>
+          <div class="footer__brand-tel">045-XXX-XXXX</div>
+          <div class="footer__brand-hours">平日 8:00〜18:00（土曜応相談）</div>
+        </div>
+        <nav aria-label="事業紹介">
+          <div class="footer__nav-title">事業紹介</div>
+          <ul class="footer__nav-list">
+            <li><a href="#">外壁塗装</a></li>
+            <li><a href="#">屋根塗装</a></li>
+            <li><a href="#">防水工事</a></li>
+            <li><a href="#">大規模修繕</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="会社情報">
+          <div class="footer__nav-title">会社情報</div>
+          <ul class="footer__nav-list">
+            <li><a href="#">会社概要</a></li>
+            <li><a href="#">ヒストリー</a></li>
+            <li><a href="#">施工実績</a></li>
+            <li><a href="#">お知らせ</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="採用・その他">
+          <div class="footer__nav-title">採用・その他</div>
+          <ul class="footer__nav-list">
+            <li><a href="#">採用情報</a></li>
+            <li><a href="#">協力業者募集</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+            <li><a href="#">サイトマップ</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2024 ○○塗装会社 All Rights Reserved.</p>
+        <div class="footer__policy">
+          <a href="#">プライバシーポリシー</a>
+          <a href="#">サイトポリシー</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('js-header');
+    const hamburger = document.getElementById('js-hamburger');
+    const mobileNav = document.getElementById('js-mobile-nav');
+
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('header--scrolled', window.scrollY > 50);
+    }, { passive: true });
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('is-open');
+      hamburger.classList.toggle('is-open', isOpen);
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('is-open');
+        hamburger.classList.remove('is-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    const tabs = document.querySelectorAll('.news__tab');
+    const tabPanelMap = { all: 'tab-all', info: 'tab-info', recruit: 'tab-recruit' };
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => { t.classList.remove('is-active'); t.setAttribute('aria-selected', 'false'); });
+        tab.classList.add('is-active');
+        tab.setAttribute('aria-selected', 'true');
+        document.querySelectorAll('.news__list').forEach(panel => panel.classList.remove('is-active'));
+        document.getElementById(tabPanelMap[tab.dataset.tab]).classList.add('is-active');
+      });
+    });
+  </script>
+</body>
+</html>
