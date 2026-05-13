@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>炭火焼肉 和牛亭 | 福岡市中央区 A5ランク黒毛和牛 完全個室</title>
+  <meta name="description" content="福岡市中央区の炭火焼肉 和牛亭。A5ランク黒毛和牛を産地直送でご提供。接待・記念日に最適な完全個室完備。特別なひとときをご堪能ください。">
+  <meta name="keywords" content="焼肉,和牛,A5,黒毛和牛,個室,接待,記念日,福岡,中央区,高級焼肉">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="炭火焼肉 和牛亭 | A5ランク黒毛和牛 完全個室">
+  <meta property="og:description" content="福岡市中央区。A5ランク黒毛和牛を産地直送。接待・記念日に最適な完全個室完備。">
+  <meta property="og:url" content="https://wagyu-tei.example.com">
+  <meta property="og:image" content="https://placehold.co/1200x630/1a1a1a/c9a84c?text=炭火焼肉+和牛亭">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="炭火焼肉 和牛亭">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="炭火焼肉 和牛亭 | A5ランク黒毛和牛">
+  <meta name="twitter:description" content="福岡市中央区。A5ランク黒毛和牛を産地直送。完全個室完備。">
+  <meta name="twitter:image" content="https://placehold.co/1200x630/1a1a1a/c9a84c?text=炭火焼肉+和牛亭">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold:        '#c9a84c',
+            'gold-light':'#e8c97a',
+            'gold-dark': '#a8873a',
+            'dark':      '#1a1a1a',
+            'dark-2':    '#222222',
+            'dark-3':    '#2a2a2a',
+            'dark-4':    '#333333',
+          },
+          fontFamily: {
+            mincho: ['"Hiragino Mincho ProN"', '"Yu Mincho"', '"YuMincho"', 'Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'Yu Gothic', 'YuGothic', sans-serif;
+      background: #1a1a1a;
+      color: #e5e5e5;
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #1a1a1a; }
+    ::-webkit-scrollbar-thumb { background: #c9a84c; border-radius: 3px; }
+
+    .gold-text { color: #c9a84c; }
+    .gold-border { border-color: #c9a84c; }
+
+    .hero-bg {
+      background-image: url('https://placehold.co/1920x1080/0d0d0d/c9a84c?text=A5+黒毛和牛');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .section-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 16px auto 0;
+    }
+    .section-divider::before,
+    .section-divider::after {
+      content: '';
+      width: 40px;
+      height: 1px;
+      background: #c9a84c;
+    }
+    .section-divider-diamond {
+      width: 6px;
+      height: 6px;
+      background: #c9a84c;
+      transform: rotate(45deg);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(201,168,76,0.2);
+    }
+
+    .gold-btn {
+      background: linear-gradient(135deg, #c9a84c 0%, #e8c97a 50%, #c9a84c 100%);
+      background-size: 200% 100%;
+      transition: background-position 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .gold-btn:hover {
+      background-position: 100% 0;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(201,168,76,0.4);
+    }
+
+    .menu-img-wrap { overflow: hidden; }
+    .menu-img-wrap img {
+      transition: transform 0.5s ease;
+    }
+    .menu-img-wrap:hover img { transform: scale(1.05); }
+
+    .nav-link {
+      position: relative;
+      color: #d4d4d4;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      transition: color 0.2s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #c9a84c;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover { color: #c9a84c; }
+    .nav-link:hover::after { width: 100%; }
+
+    .course-badge {
+      background: linear-gradient(135deg, #c9a84c, #e8c97a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .star-gold { color: #c9a84c; }
+
+    /* ===== Contact Form ===== */
+    .form-input {
+      -webkit-appearance: none;
+      appearance: none;
+      color-scheme: dark;
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(0.7) sepia(1) saturate(2) hue-rotate(5deg);
+      opacity: 0.7;
+      cursor: pointer;
+    }
+    select option {
+      background: #333333;
+      color: #e5e5e5;
+    }
+    .radio-gold {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 50%;
+      background: #2a2a2a;
+      cursor: pointer;
+      flex-shrink: 0;
+      position: relative;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .radio-gold:checked { border-color: #c9a84c; }
+    .radio-gold:checked::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #c9a84c;
+    }
+    .radio-gold:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(201,168,76,0.25);
+    }
+    .input-error { border-color: rgba(239,68,68,0.6) !important; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="fixed top-0 w-full z-50 bg-dark/95 backdrop-blur-sm border-b border-gold/20">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#top" class="flex flex-col leading-tight">
+        <span class="text-gold font-mincho text-xl tracking-widest">和牛亭</span>
+        <span class="text-gray-400 text-xs tracking-wider">炭火焼肉</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#commitment" class="nav-link">こだわり</a>
+        <a href="#course" class="nav-link">コース</a>
+        <a href="#menu" class="nav-link">メニュー</a>
+        <a href="#rooms" class="nav-link">個室</a>
+        <a href="#access" class="nav-link">アクセス</a>
+        <a href="#contact" class="nav-link">お問い合わせ</a>
+      </div>
+      <a href="#reserve"
+         class="gold-btn text-dark font-bold text-xs px-6 py-2.5 rounded tracking-widest">
+        ご予約
+      </a>
+    </div>
+  </nav>
+
+
+  <!-- ===== 1. Hero ===== -->
+  <section id="top" class="hero-bg relative min-h-screen flex items-center justify-center pt-14">
+    <div class="absolute inset-0 bg-dark/75"></div>
+
+    <!-- 装飾ライン -->
+    <div class="absolute inset-8 md:inset-16 border border-gold/20 pointer-events-none hidden md:block"></div>
+
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <p class="text-gold text-xs tracking-[0.4em] mb-8 font-light">— CHARCOAL GRILLED WAGYU —</p>
+
+      <h1 class="font-mincho text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6 tracking-wider">
+        至福の一皿を、<br>
+        <span class="text-gold">あなたに。</span>
+      </h1>
+
+      <p class="text-gray-300 text-base md:text-lg mb-4 leading-relaxed tracking-wide">
+        A5ランク黒毛和牛 産地直送 ／ 完全個室完備
+      </p>
+      <p class="text-gray-400 text-sm mb-12 tracking-wider">
+        福岡市中央区 ／ 接待・記念日に選ばれる炭火焼肉
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#reserve"
+           class="gold-btn text-dark font-bold text-base px-12 py-4 rounded tracking-widest shadow-xl">
+          ご予約はこちら
+        </a>
+        <a href="#course"
+           class="border border-gold/60 text-gold font-bold text-base px-12 py-4 rounded tracking-widest
+                  hover:bg-gold/10 transition-colors">
+          コースを見る
+        </a>
+      </div>
+
+      <p class="text-gray-500 text-xs mt-8 tracking-wider">
+        TEL: 092-XXX-XXXX ／ 営業時間 17:00〜23:00
+      </p>
+    </div>
+
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-5 h-5 text-gold/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </div>
+  </section>
+
+
+  <!-- ===== 2. こだわり ===== -->
+  <section id="commitment" class="py-24 bg-dark-2">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-16 fade-in">
+        <p class="text-gold text-xs tracking-[0.4em] mb-4">OUR COMMITMENT</p>
+        <h2 class="font-mincho text-3xl md:text-4xl text-white tracking-wider">和牛亭のこだわり</h2>
+        <div class="section-divider">
+          <div class="section-divider-diamond"></div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- こだわり1 -->
+        <div class="fade-in text-center group">
+          <div class="w-24 h-24 mx-auto mb-6 border border-gold/40 rounded-full flex items-center justify-center
+                      group-hover:border-gold group-hover:bg-gold/5 transition-all duration-300">
+            <svg class="w-10 h-10 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438
+                       0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806
+                       1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0
+                       01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42
+                       0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946
+                       3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+            </svg>
+          </div>
+          <h3 class="font-mincho text-xl text-gold mb-4 tracking-wide">A5ランク黒毛和牛</h3>
+          <div class="w-8 h-px bg-gold/40 mx-auto mb-4"></div>
+          <p class="text-gray-400 text-sm leading-loose">
+            九州の厳選牧場からA5ランク黒毛和牛を産地直送でお届け。きめ細やかな霜降りと豊かな旨味は、最上級の証。一頭買いにより希少部位もご提供いたします。
+          </p>
+        </div>
+
+        <!-- こだわり2 -->
+        <div class="fade-in text-center group">
+          <div class="w-24 h-24 mx-auto mb-6 border border-gold/40 rounded-full flex items-center justify-center
+                      group-hover:border-gold group-hover:bg-gold/5 transition-all duration-300">
+            <svg class="w-10 h-10 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1
+                       0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0
+                       001 1m-6 0h6"/>
+            </svg>
+          </div>
+          <h3 class="font-mincho text-xl text-gold mb-4 tracking-wide">完全個室の空間</h3>
+          <div class="w-8 h-px bg-gold/40 mx-auto mb-4"></div>
+          <p class="text-gray-400 text-sm leading-loose">
+            すべてのお席が完全個室。接待・記念日・ご家族のお祝いなど、大切な場面を他のお客様を気にせず、お二人だけの時間としてお過ごしいただけます。
+          </p>
+        </div>
+
+        <!-- こだわり3 -->
+        <div class="fade-in text-center group">
+          <div class="w-24 h-24 mx-auto mb-6 border border-gold/40 rounded-full flex items-center justify-center
+                      group-hover:border-gold group-hover:bg-gold/5 transition-all duration-300">
+            <svg class="w-10 h-10 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5
+                       0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-mincho text-xl text-gold mb-4 tracking-wide">心づくしのおもてなし</h3>
+          <div class="w-8 h-px bg-gold/40 mx-auto mb-4"></div>
+          <p class="text-gray-400 text-sm leading-loose">
+            記念日のサプライズ演出や接待のアレンジなど、お客様のご要望に合わせた丁寧なサービスをご提供。最高の思い出づくりを、スタッフ一同でサポートいたします。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 3. おすすめコース ===== -->
+  <section id="course" class="py-24 bg-dark">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-16 fade-in">
+        <p class="text-gold text-xs tracking-[0.4em] mb-4">COURSE MENU</p>
+        <h2 class="font-mincho text-3xl md:text-4xl text-white tracking-wider">おすすめコース</h2>
+        <div class="section-divider">
+          <div class="section-divider-diamond"></div>
+        </div>
+        <p class="text-gray-400 text-sm mt-6">すべてのコースに前菜・サラダ・デザート・食後のドリンクが含まれます</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <!-- コース1 -->
+        <div class="fade-in card-hover border border-gold/20 rounded bg-dark-3 overflow-hidden">
+          <div class="menu-img-wrap">
+            <img src="https://placehold.co/640x360/1a1a1a/c9a84c?text=和牛スタンダードコース"
+                 alt="和牛スタンダードコース" class="w-full aspect-video object-cover">
+          </div>
+          <div class="p-6">
+            <p class="text-gold text-xs tracking-[0.3em] mb-2">STANDARD</p>
+            <h3 class="font-mincho text-xl text-white mb-3 tracking-wide">和牛スタンダードコース</h3>
+            <div class="w-8 h-px bg-gold/40 mb-4"></div>
+            <ul class="text-gray-400 text-xs space-y-1.5 mb-6 leading-relaxed">
+              <li>・ 前菜盛り合わせ</li>
+              <li>・ 黒毛和牛カルビ・ロース</li>
+              <li>・ 野菜盛り合わせ</li>
+              <li>・ 冷麺 or ライス</li>
+              <li>・ デザート・ドリンク</li>
+            </ul>
+            <div class="flex items-end justify-between">
+              <div>
+                <span class="course-badge font-mincho text-3xl font-bold">¥8,800</span>
+                <span class="text-gray-500 text-xs ml-1">/ 税込・おひとり様</span>
+              </div>
+            </div>
+            <a href="#reserve"
+               class="mt-5 block w-full text-center border border-gold/50 text-gold text-xs py-3
+                      tracking-widest hover:bg-gold/10 transition-colors rounded">
+              このコースで予約
+            </a>
+          </div>
+        </div>
+
+        <!-- コース2（おすすめ） -->
+        <div class="fade-in card-hover border border-gold rounded bg-dark-3 overflow-hidden relative">
+          <div class="absolute top-4 right-4 z-10 bg-gold text-dark text-xs font-bold px-3 py-1 tracking-wider">
+            人気No.1
+          </div>
+          <div class="menu-img-wrap">
+            <img src="https://placehold.co/640x360/1a1a1a/c9a84c?text=和牛特選コース"
+                 alt="和牛特選コース" class="w-full aspect-video object-cover">
+          </div>
+          <div class="p-6">
+            <p class="text-gold text-xs tracking-[0.3em] mb-2">PREMIUM</p>
+            <h3 class="font-mincho text-xl text-white mb-3 tracking-wide">和牛特選コース</h3>
+            <div class="w-8 h-px bg-gold mb-4"></div>
+            <ul class="text-gray-400 text-xs space-y-1.5 mb-6 leading-relaxed">
+              <li>・ 特選前菜盛り合わせ</li>
+              <li>・ A5黒毛和牛カルビ・ロース・タン</li>
+              <li>・ 希少部位2種（シャトーブリアン等）</li>
+              <li>・ 季節の野菜・キムチ盛り合わせ</li>
+              <li>・ 冷麺 or 石焼ビビンバ</li>
+              <li>・ 特製デザート・ドリンク</li>
+            </ul>
+            <div class="flex items-end justify-between">
+              <div>
+                <span class="course-badge font-mincho text-3xl font-bold">¥13,200</span>
+                <span class="text-gray-500 text-xs ml-1">/ 税込・おひとり様</span>
+              </div>
+            </div>
+            <a href="#reserve"
+               class="mt-5 block w-full text-center gold-btn text-dark font-bold text-xs py-3
+                      tracking-widest rounded shadow-lg">
+              このコースで予約
+            </a>
+          </div>
+        </div>
+
+        <!-- コース3 -->
+        <div class="fade-in card-hover border border-gold/20 rounded bg-dark-3 overflow-hidden">
+          <div class="menu-img-wrap">
+            <img src="https://placehold.co/640x360/1a1a1a/c9a84c?text=和牛至極コース"
+                 alt="和牛至極コース" class="w-full aspect-video object-cover">
+          </div>
+          <div class="p-6">
+            <p class="text-gold text-xs tracking-[0.3em] mb-2">SUPREME</p>
+            <h3 class="font-mincho text-xl text-white mb-3 tracking-wide">和牛至極コース</h3>
+            <div class="w-8 h-px bg-gold/40 mb-4"></div>
+            <ul class="text-gray-400 text-xs space-y-1.5 mb-6 leading-relaxed">
+              <li>・ 贅沢前菜・造り盛り合わせ</li>
+              <li>・ A5黒毛和牛 全7部位</li>
+              <li>・ シャトーブリアン・特上タン</li>
+              <li>・ 松阪牛・近江牛 食べ比べ</li>
+              <li>・ 個室限定 特製すき焼き仕立て</li>
+              <li>・ 選べる〆・特製デザート・厳選ドリンク</li>
+            </ul>
+            <div class="flex items-end justify-between">
+              <div>
+                <span class="course-badge font-mincho text-3xl font-bold">¥19,800</span>
+                <span class="text-gray-500 text-xs ml-1">/ 税込・おひとり様</span>
+              </div>
+            </div>
+            <a href="#reserve"
+               class="mt-5 block w-full text-center border border-gold/50 text-gold text-xs py-3
+                      tracking-widest hover:bg-gold/10 transition-colors rounded">
+              このコースで予約
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-gray-600 text-xs text-center mt-8">
+        ※ 料金はすべて税込・おひとり様料金です。最低注文人数 2名様より。
+        飲み放題オプション（¥2,200）もご用意しています。
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ===== 4. メニューハイライト ===== -->
+  <section id="menu" class="py-24 bg-dark-2">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-16 fade-in">
+        <p class="text-gold text-xs tracking-[0.4em] mb-4">MENU HIGHLIGHT</p>
+        <h2 class="font-mincho text-3xl md:text-4xl text-white tracking-wider">メニューハイライト</h2>
+        <div class="section-divider">
+          <div class="section-divider-diamond"></div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+        <!-- 1 -->
+        <div class="fade-in menu-img-wrap rounded overflow-hidden relative group">
+          <img src="https://placehold.co/480x360/0d0d0d/c9a84c?text=シャトーブリアン"
+               alt="シャトーブリアン" class="w-full aspect-[4/3] object-cover">
+          <div class="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity
+                      flex items-end p-4">
+            <div>
+              <p class="text-gold text-xs tracking-wider">SPECIAL CUT</p>
+              <p class="font-mincho text-white text-lg">シャトーブリアン</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="fade-in menu-img-wrap rounded overflow-hidden relative group">
+          <img src="https://placehold.co/480x360/0d0d0d/c9a84c?text=特上カルビ"
+               alt="特上カルビ" class="w-full aspect-[4/3] object-cover">
+          <div class="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity
+                      flex items-end p-4">
+            <div>
+              <p class="text-gold text-xs tracking-wider">A5 KARUBI</p>
+              <p class="font-mincho text-white text-lg">特上カルビ</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="fade-in menu-img-wrap rounded overflow-hidden relative group">
+          <img src="https://placehold.co/480x360/0d0d0d/c9a84c?text=厚切りタン塩"
+               alt="厚切りタン塩" class="w-full aspect-[4/3] object-cover">
+          <div class="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity
+                      flex items-end p-4">
+            <div>
+              <p class="text-gold text-xs tracking-wider">THICK TONGUE</p>
+              <p class="font-mincho text-white text-lg">厚切りタン塩</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="fade-in menu-img-wrap rounded overflow-hidden relative group">
+          <img src="https://placehold.co/480x360/0d0d0d/c9a84c?text=特選ロース"
+               alt="特選ロース" class="w-full aspect-[4/3] object-cover">
+          <div class="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity
+                      flex items-end p-4">
+            <div>
+              <p class="text-gold text-xs tracking-wider">A5 ROSU</p>
+              <p class="font-mincho text-white text-lg">特選ロース</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="fade-in menu-img-wrap rounded overflow-hidden relative group">
+          <img src="https://placehold.co/480x360/0d0d0d/c9a84c?text=和牛すき焼き"
+               alt="和牛すき焼き" class="w-full aspect-[4/3] object-cover">
+          <div class="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity
+                      flex items-end p-4">
+            <div>
+              <p class="text-gold text-xs tracking-wider">SUKIYAKI</p>
+              <p class="font-mincho text-white text-lg">和牛すき焼き</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="fade-in menu-img-wrap rounded overflow-hidden relative group">
+          <img src="https://placehold.co/480x360/0d0d0d/c9a84c?text=季節のデザート"
+               alt="季節のデザート" class="w-full aspect-[4/3] object-cover">
+          <div class="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity
+                      flex items-end p-4">
+            <div>
+              <p class="text-gold text-xs tracking-wider">DESSERT</p>
+              <p class="font-mincho text-white text-lg">季節のデザート</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 5. 個室紹介 ===== -->
+  <section id="rooms" class="py-24 bg-dark">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-16 fade-in">
+        <p class="text-gold text-xs tracking-[0.4em] mb-4">PRIVATE ROOM</p>
+        <h2 class="font-mincho text-3xl md:text-4xl text-white tracking-wider">完全個室のご案内</h2>
+        <div class="section-divider">
+          <div class="section-divider-diamond"></div>
+        </div>
+        <p class="text-gray-400 text-sm mt-6">全室完全個室。大切なひとときを、特別な空間でお過ごしください。</p>
+      </div>
+
+      <div class="space-y-12">
+        <!-- 2名用 -->
+        <div class="fade-in flex flex-col md:flex-row items-stretch gap-0 border border-gold/20 rounded overflow-hidden">
+          <div class="w-full md:w-1/2 menu-img-wrap">
+            <img src="https://placehold.co/720x480/0d0d0d/c9a84c?text=2名様用+カップル個室"
+                 alt="2名様用個室" class="w-full h-64 md:h-full object-cover">
+          </div>
+          <div class="w-full md:w-1/2 bg-dark-3 p-8 md:p-10 flex flex-col justify-center">
+            <p class="text-gold text-xs tracking-[0.3em] mb-3">FOR 2 PERSONS</p>
+            <h3 class="font-mincho text-2xl text-white mb-4 tracking-wide">2名様用 ／ カップルルーム</h3>
+            <div class="w-8 h-px bg-gold/40 mb-5"></div>
+            <p class="text-gray-400 text-sm leading-loose mb-6">
+              記念日や大切なデートに最適な2名専用の個室。照明を落とした落ち着いた空間で、お二人だけの特別なひとときを演出します。バースデーサプライズやプロポーズのアレンジもお気軽にご相談ください。
+            </p>
+            <div class="flex flex-wrap gap-3 mb-6">
+              <span class="border border-gold/30 text-gold text-xs px-3 py-1 rounded-full">完全個室</span>
+              <span class="border border-gold/30 text-gold text-xs px-3 py-1 rounded-full">記念日演出可</span>
+              <span class="border border-gold/30 text-gold text-xs px-3 py-1 rounded-full">禁煙</span>
+            </div>
+            <a href="#reserve" class="text-gold text-xs tracking-widest hover:text-gold-light transition-colors">
+              このお部屋を予約する →
+            </a>
+          </div>
+        </div>
+
+        <!-- 4名用 -->
+        <div class="fade-in flex flex-col md:flex-row-reverse items-stretch gap-0 border border-gold/20 rounded overflow-hidden">
+          <div class="w-full md:w-1/2 menu-img-wrap">
+            <img src="https://placehold.co/720x480/0d0d0d/c9a84c?text=4名様用+接待個室"
+                 alt="4名様用個室" class="w-full h-64 md:h-full object-cover">
+          </div>
+          <div class="w-full md:w-1/2 bg-dark-3 p-8 md:p-10 flex flex-col justify-center">
+            <p class="text-gold text-xs tracking-[0.3em] mb-3">FOR 4 PERSONS</p>
+            <h3 class="font-mincho text-2xl text-white mb-4 tracking-wide">4名様用 ／ 接待ルーム</h3>
+            <div class="w-8 h-px bg-gold/40 mb-5"></div>
+            <p class="text-gray-400 text-sm leading-loose mb-6">
+              ビジネスの接待や少人数でのお祝いに最適な個室。落ち着いた和モダンの空間でゆったりとした席配置を確保。プロジェクターやホワイトボードのご用意も可能です（要事前予約）。
+            </p>
+            <div class="flex flex-wrap gap-3 mb-6">
+              <span class="border border-gold/30 text-gold text-xs px-3 py-1 rounded-full">完全個室</span>
+              <span class="border border-gold/30 text-gold text-xs px-3 py-1 rounded-full">接待対応</span>
+              <span class="border border-gold/30 text-gold text-xs px-3 py-1 rounded-full">AV機器相談可</span>
+            </div>
+            <a href="#reserve" class="text-gold text-xs tracking-widest hover:text-gold-light transition-colors">
+              このお部屋を予約する →
+            </a>
+          </div>
+        </div>
+
+        <!-- 8名用 -->
+        <div class="fade-in flex flex-col md:flex-row items-stretch gap-0 border border-gold/20 rounded overflow-hidden">
+          <div class="w-full md:w-1/2 menu-img-wrap">
+            <img src="https://placehold.co/720x480/0d0d0d/c9a84c?text=8名様用+宴会個室"
+                 alt="8名様用個室" class="w-full h-64 md:h-full object-cover">
+          </div>
+          <div class="w-full md:w-1/2 bg-dark-3 p-8 md:p-10 flex flex-col justify-center">
+            <p class="text-gold text-xs tracking-[0.3em] mb-3">FOR 8 PERSONS</p>
+            <h3 class="font-mincho text-2xl text-white mb-4 tracking-wide">8名様用 ／ 宴会ルーム</h3>
+            <div class="w-8 h-px bg-gold/40 mb-5"></div>
+            <p class="text-gray-400 text-sm leading-loose mb-6">
+              会社の宴会や同窓会、ご家族の集まりなどに最適な大型個室。贅沢な空間でA5黒毛和牛を囲みながら、特別なひとときをお楽しみください。8名以上のご利用は事前にお問い合わせください。
+            </p>
+            <div class="flex flex-wrap gap-3 mb-6">
+              <span class="border border-gold/30 text-gold text-xs px-3 py-1 rounded-full">完全個室</span>
+              <span class="border border-gold/30 text-gold text-xs px-3 py-1 rounded-full">宴会・貸切可</span>
+              <span class="border border-gold/30 text-gold text-xs px-3 py-1 rounded-full">幹事サポート</span>
+            </div>
+            <a href="#reserve" class="text-gold text-xs tracking-widest hover:text-gold-light transition-colors">
+              このお部屋を予約する →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 6. お客様の声 ===== -->
+  <section id="voice" class="py-24 bg-dark-2">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-16 fade-in">
+        <p class="text-gold text-xs tracking-[0.4em] mb-4">CUSTOMER VOICE</p>
+        <h2 class="font-mincho text-3xl md:text-4xl text-white tracking-wider">お客様の声</h2>
+        <div class="section-divider">
+          <div class="section-divider-diamond"></div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- 声1 -->
+        <div class="fade-in bg-dark-3 border border-gold/15 rounded p-7 relative hover:border-gold/40 transition-colors">
+          <div class="text-gold/10 font-serif text-8xl absolute top-2 left-5 leading-none select-none">"</div>
+          <div class="flex gap-0.5 mb-5">
+            <svg class="w-4 h-4 star-gold" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969
+                       0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755
+                       1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197
+                       -1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588
+                       -1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            <svg class="w-4 h-4 star-gold" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969
+                       0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755
+                       1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197
+                       -1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588
+                       -1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            <svg class="w-4 h-4 star-gold" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969
+                       0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755
+                       1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197
+                       -1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588
+                       -1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            <svg class="w-4 h-4 star-gold" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969
+                       0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755
+                       1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197
+                       -1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588
+                       -1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            <svg class="w-4 h-4 star-gold" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969
+                       0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755
+                       1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197
+                       -1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588
+                       -1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+          </div>
+          <p class="text-gray-300 text-sm leading-loose mb-6">
+            大事な取引先との接待に利用しました。完全個室で他のお客様を気にせず商談でき、A5黒毛和牛のクオリティには取引先の方も非常に喜ばれました。スタッフの気配りも一流で、また利用したいと思います。
+          </p>
+          <div class="border-t border-gold/15 pt-4">
+            <p class="text-gold font-mincho tracking-wide text-sm">K.T 様 / 46歳・男性</p>
+            <p class="text-gray-600 text-xs mt-0.5">接待でご利用 ／ 2025年3月</p>
+          </div>
+        </div>
+
+        <!-- 声2 -->
+        <div class="fade-in bg-dark-3 border border-gold/15 rounded p-7 relative hover:border-gold/40 transition-colors">
+          <div class="text-gold/10 font-serif text-8xl absolute top-2 left-5 leading-none select-none">"</div>
+          <div class="flex gap-0.5 mb-5">
+            <svg class="w-4 h-4 star-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 star-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 star-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 star-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 star-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-300 text-sm leading-loose mb-6">
+            結婚記念日に2名用個室を予約しました。到着するとテーブルに花が飾られていて感動！シャトーブリアンは今まで食べた中で最高の味でした。妻も大喜びで、毎年ここで記念日を祝うと決めています。
+          </p>
+          <div class="border-t border-gold/15 pt-4">
+            <p class="text-gold font-mincho tracking-wide text-sm">M.S 様 / 41歳・男性</p>
+            <p class="text-gray-600 text-xs mt-0.5">結婚記念日にご利用 ／ 2025年2月</p>
+          </div>
+        </div>
+
+        <!-- 声3 -->
+        <div class="fade-in bg-dark-3 border border-gold/15 rounded p-7 relative hover:border-gold/40 transition-colors">
+          <div class="text-gold/10 font-serif text-8xl absolute top-2 left-5 leading-none select-none">"</div>
+          <div class="flex gap-0.5 mb-5">
+            <svg class="w-4 h-4 star-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 star-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 star-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 star-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 star-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-300 text-sm leading-loose mb-6">
+            部の懇親会で8名個室を貸し切りました。幹事の私が事前に細かい要望を伝えたところ、当日はすべて完璧に対応していただけました。肉のクオリティは言わずもがな、スタッフの丁寧な接客にメンバー全員が感激していました。
+          </p>
+          <div class="border-t border-gold/15 pt-4">
+            <p class="text-gold font-mincho tracking-wide text-sm">Y.H 様 / 38歳・女性</p>
+            <p class="text-gray-600 text-xs mt-0.5">職場懇親会でご利用 ／ 2025年4月</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 7. アクセス・営業時間 ===== -->
+  <section id="access" class="py-24 bg-dark">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-16 fade-in">
+        <p class="text-gold text-xs tracking-[0.4em] mb-4">ACCESS</p>
+        <h2 class="font-mincho text-3xl md:text-4xl text-white tracking-wider">アクセス・営業時間</h2>
+        <div class="section-divider">
+          <div class="section-divider-diamond"></div>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-8 md:gap-12">
+        <!-- 地図エリア -->
+        <div class="fade-in w-full md:w-1/2">
+          <div class="bg-dark-3 border border-gold/20 rounded aspect-[4/3] flex flex-col items-center justify-center">
+            <svg class="w-12 h-12 text-gold mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0
+                       1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <p class="text-gold font-mincho tracking-widest">Google Map</p>
+            <p class="text-gray-500 text-sm mt-1">福岡市中央区</p>
+            <a href="#" class="mt-4 text-xs text-gold/60 underline hover:text-gold transition-colors">
+              地図を開く →
+            </a>
+          </div>
+
+          <!-- 駐車場情報 -->
+          <div class="mt-4 border border-gold/20 rounded p-5 bg-dark-3">
+            <h4 class="text-gold text-sm font-bold mb-3 flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+              </svg>
+              駐車場情報
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li class="flex items-start gap-2">
+                <span class="text-gold mt-0.5">●</span>
+                店舗専用駐車場あり（3台）／ご予約時にお伝えください
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-gold mt-0.5">●</span>
+                近隣コインパーキング複数あり（徒歩1〜3分）
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-gold mt-0.5">●</span>
+                2時間まで駐車サービス券をご提供（¥13,200コース以上）
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 店舗情報 -->
+        <div class="fade-in w-full md:w-1/2">
+          <dl class="space-y-5">
+            <div class="flex gap-5 pb-5 border-b border-gold/10">
+              <dt class="text-gold text-xs tracking-widest w-20 flex-shrink-0 pt-1 font-mincho">店名</dt>
+              <dd class="text-gray-200 text-sm leading-relaxed font-mincho text-lg">炭火焼肉 和牛亭</dd>
+            </div>
+            <div class="flex gap-5 pb-5 border-b border-gold/10">
+              <dt class="text-gold text-xs tracking-widest w-20 flex-shrink-0 pt-1">住所</dt>
+              <dd class="text-gray-300 text-sm leading-relaxed">
+                〒810-0001<br>福岡県福岡市中央区天神X-X-X<br>和牛亭ビル 1F
+              </dd>
+            </div>
+            <div class="flex gap-5 pb-5 border-b border-gold/10">
+              <dt class="text-gold text-xs tracking-widest w-20 flex-shrink-0 pt-1">アクセス</dt>
+              <dd class="text-gray-300 text-sm leading-relaxed">
+                福岡市地下鉄空港線「天神駅」より徒歩5分<br>
+                西鉄「福岡（天神）駅」より徒歩7分
+              </dd>
+            </div>
+            <div class="flex gap-5 pb-5 border-b border-gold/10">
+              <dt class="text-gold text-xs tracking-widest w-20 flex-shrink-0 pt-1">電話</dt>
+              <dd class="text-sm">
+                <a href="tel:092-XXX-XXXX"
+                   class="text-gray-200 hover:text-gold transition-colors font-bold text-lg">
+                  092-XXX-XXXX
+                </a>
+              </dd>
+            </div>
+            <div class="flex gap-5 pb-5 border-b border-gold/10">
+              <dt class="text-gold text-xs tracking-widest w-20 flex-shrink-0 pt-1">営業時間</dt>
+              <dd class="text-gray-300 text-sm leading-relaxed">
+                17:00 〜 23:00（L.O. 22:00）<br>
+                <span class="text-gray-500 text-xs">土・日・祝日 16:00 〜 23:00</span>
+              </dd>
+            </div>
+            <div class="flex gap-5">
+              <dt class="text-gold text-xs tracking-widest w-20 flex-shrink-0 pt-1">定休日</dt>
+              <dd class="text-gray-300 text-sm">月曜日（祝日の場合は翌火曜日）</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 8. 予約CTA ===== -->
+  <section id="reserve" class="py-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-dark-2"></div>
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-0 left-1/4 w-96 h-96 rounded-full bg-gold"></div>
+      <div class="absolute bottom-0 right-1/4 w-64 h-64 rounded-full bg-gold"></div>
+    </div>
+    <!-- 装飾ライン -->
+    <div class="absolute inset-6 md:inset-12 border border-gold/10 pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <div class="fade-in">
+        <p class="text-gold text-xs tracking-[0.4em] mb-6">RESERVATION</p>
+        <h2 class="font-mincho text-3xl md:text-5xl text-white leading-tight mb-4 tracking-wider">
+          特別なひとときを、<br>
+          <span class="text-gold">今すぐご予約ください。</span>
+        </h2>
+        <p class="text-gray-400 text-base mb-12 leading-relaxed">
+          接待・記念日・大切な方へのご馳走に。<br class="hidden md:block">
+          完全個室でA5黒毛和牛の至福の時間をご用意しています。
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-5 justify-center mb-12">
+          <!-- 電話予約 -->
+          <a href="tel:092-XXX-XXXX"
+             class="flex items-center justify-center gap-3 bg-dark-3 border border-gold text-gold
+                    font-bold text-lg px-10 py-5 rounded hover:bg-gold/10 transition-all
+                    transform hover:-translate-y-1 shadow-xl">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037
+                       11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1
+                       1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+            </svg>
+            <span>
+              <span class="block text-xs font-normal text-gray-400 mb-0.5">お電話でのご予約</span>
+              092-XXX-XXXX
+            </span>
+          </a>
+
+          <!-- ネット予約 -->
+          <a href="#"
+             class="gold-btn flex items-center justify-center gap-3 text-dark font-bold text-lg
+                    px-10 py-5 rounded shadow-xl">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0
+                       00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+            <span>
+              <span class="block text-xs font-normal text-dark/70 mb-0.5">24時間受付</span>
+              ネット予約はこちら
+            </span>
+          </a>
+        </div>
+
+        <!-- 注意事項 -->
+        <div class="border border-gold/20 rounded p-6 max-w-2xl mx-auto text-left">
+          <h4 class="text-gold text-sm font-bold mb-3">ご予約の際のご注意</h4>
+          <ul class="space-y-2 text-gray-400 text-xs leading-relaxed">
+            <li class="flex items-start gap-2">
+              <span class="text-gold flex-shrink-0">・</span>
+              コースのご予約は前日17:00までにお願いします
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gold flex-shrink-0">・</span>
+              記念日・サプライズ演出のご要望は予約時にお申し付けください
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gold flex-shrink-0">・</span>
+              キャンセルはご予約日2日前までにご連絡ください（前日・当日はキャンセル料が発生する場合があります）
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gold flex-shrink-0">・</span>
+              8名以上の大人数ご利用はお電話にてご相談ください
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 9. お問い合わせフォーム ===== -->
+  <section id="contact" class="py-24 bg-dark-2">
+    <div class="max-w-3xl mx-auto px-4">
+
+      <div class="text-center mb-16 fade-in">
+        <p class="text-gold text-xs tracking-[0.4em] mb-4">CONTACT & RESERVATION</p>
+        <h2 class="font-mincho text-3xl md:text-4xl text-white tracking-wider">ご予約・お問い合わせ</h2>
+        <div class="section-divider">
+          <div class="section-divider-diamond"></div>
+        </div>
+        <p class="text-gray-400 text-sm mt-6 leading-relaxed">
+          フォームよりご予約・お問い合わせいただけます。<br>
+          内容確認後、1〜2営業日以内にご返信いたします。
+        </p>
+      </div>
+
+      <!-- サンクスメッセージ -->
+      <div id="form-thanks"
+           class="hidden text-center py-16 border border-gold/30 rounded bg-dark-3 px-8 fade-in">
+        <div class="w-16 h-16 mx-auto mb-6 border border-gold rounded-full flex items-center justify-center">
+          <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"/>
+          </svg>
+        </div>
+        <h3 class="font-mincho text-2xl text-gold mb-4 tracking-wide">お問い合わせを承りました</h3>
+        <p class="text-gray-400 text-sm leading-loose">
+          この度はお問い合わせいただきありがとうございます。<br>
+          内容を確認の上、1〜2営業日以内にご連絡いたします。<br>
+          しばらくお待ちください。
+        </p>
+      </div>
+
+      <!-- フォーム -->
+      <form id="contact-form"
+            action="https://formspree.io/f/maqvkeaj"
+            method="POST"
+            class="fade-in border border-gold/20 rounded bg-dark-3 p-8 md:p-12"
+            novalidate>
+
+        <div class="space-y-7">
+
+          <!-- お名前 -->
+          <div>
+            <label for="c-name" class="block text-gold text-xs tracking-widest mb-2">
+              お名前 <span class="text-red-400 ml-1 font-normal">必須</span>
+            </label>
+            <input type="text" id="c-name" name="お名前"
+                   placeholder="山田 太郎"
+                   autocomplete="name"
+                   class="form-input w-full bg-dark-4 border border-gold/20 rounded text-gray-200 text-sm px-4 py-3 placeholder-gray-600 focus:outline-none focus:border-gold transition-colors">
+            <p id="c-name-error" class="hidden text-red-400 text-xs mt-1.5"></p>
+          </div>
+
+          <!-- 電話番号 -->
+          <div>
+            <label for="c-tel" class="block text-gold text-xs tracking-widest mb-2">
+              電話番号 <span class="text-red-400 ml-1 font-normal">必須</span>
+            </label>
+            <input type="tel" id="c-tel" name="電話番号"
+                   placeholder="090-1234-5678"
+                   autocomplete="tel"
+                   class="form-input w-full bg-dark-4 border border-gold/20 rounded text-gray-200 text-sm px-4 py-3 placeholder-gray-600 focus:outline-none focus:border-gold transition-colors">
+            <p id="c-tel-error" class="hidden text-red-400 text-xs mt-1.5"></p>
+          </div>
+
+          <!-- メールアドレス -->
+          <div>
+            <label for="c-email" class="block text-gold text-xs tracking-widest mb-2">
+              メールアドレス <span class="text-red-400 ml-1 font-normal">必須</span>
+            </label>
+            <input type="email" id="c-email" name="メールアドレス"
+                   placeholder="example@email.com"
+                   autocomplete="email"
+                   class="form-input w-full bg-dark-4 border border-gold/20 rounded text-gray-200 text-sm px-4 py-3 placeholder-gray-600 focus:outline-none focus:border-gold transition-colors">
+            <p id="c-email-error" class="hidden text-red-400 text-xs mt-1.5"></p>
+          </div>
+
+          <!-- ご利用日・ご利用時間 -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="c-date" class="block text-gold text-xs tracking-widest mb-2">ご利用日</label>
+              <input type="date" id="c-date" name="ご利用日"
+                     class="form-input w-full bg-dark-4 border border-gold/20 rounded text-gray-200 text-sm px-4 py-3 focus:outline-none focus:border-gold transition-colors">
+              <p id="c-date-error" class="hidden text-red-400 text-xs mt-1.5"></p>
+            </div>
+            <div>
+              <label for="c-time" class="block text-gold text-xs tracking-widest mb-2">ご利用時間</label>
+              <select id="c-time" name="ご利用時間"
+                      class="form-input w-full bg-dark-4 border border-gold/20 rounded text-gray-200 text-sm px-4 py-3 focus:outline-none focus:border-gold transition-colors">
+                <option value="">ご選択ください</option>
+                <option value="17:00">17:00</option>
+                <option value="17:30">17:30</option>
+                <option value="18:00">18:00</option>
+                <option value="18:30">18:30</option>
+                <option value="19:00">19:00</option>
+                <option value="19:30">19:30</option>
+                <option value="20:00">20:00</option>
+                <option value="20:30">20:30</option>
+                <option value="21:00">21:00</option>
+                <option value="21:30">21:30</option>
+                <option value="22:00">22:00</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- ご利用人数 -->
+          <div>
+            <label for="c-guests" class="block text-gold text-xs tracking-widest mb-2">ご利用人数</label>
+            <select id="c-guests" name="ご利用人数"
+                    class="form-input w-full bg-dark-4 border border-gold/20 rounded text-gray-200 text-sm px-4 py-3 focus:outline-none focus:border-gold transition-colors">
+              <option value="">お選びください</option>
+              <option value="1">1名</option>
+              <option value="2">2名</option>
+              <option value="3">3名</option>
+              <option value="4">4名</option>
+              <option value="5">5名</option>
+              <option value="6">6名</option>
+              <option value="7">7名</option>
+              <option value="8">8名</option>
+              <option value="9">9名</option>
+              <option value="10">10名</option>
+              <option value="11">11名</option>
+              <option value="12">12名</option>
+              <option value="13">13名</option>
+              <option value="14">14名</option>
+              <option value="15">15名</option>
+              <option value="16">16名</option>
+              <option value="17">17名</option>
+              <option value="18">18名</option>
+              <option value="19">19名</option>
+              <option value="20">20名</option>
+            </select>
+            <p class="text-gray-600 text-xs mt-1.5">※ 8名以上のご利用はお電話にてご相談ください</p>
+          </div>
+
+          <!-- ご利用目的 -->
+          <div>
+            <p class="text-gold text-xs tracking-widest mb-3">ご利用目的</p>
+            <div class="flex flex-wrap gap-6">
+              <label class="flex items-center gap-2 cursor-pointer group">
+                <input type="radio" name="ご利用目的" value="接待" class="radio-gold">
+                <span class="text-gray-300 text-sm group-hover:text-gold transition-colors">接待</span>
+              </label>
+              <label class="flex items-center gap-2 cursor-pointer group">
+                <input type="radio" name="ご利用目的" value="記念日" class="radio-gold">
+                <span class="text-gray-300 text-sm group-hover:text-gold transition-colors">記念日</span>
+              </label>
+              <label class="flex items-center gap-2 cursor-pointer group">
+                <input type="radio" name="ご利用目的" value="家族" class="radio-gold">
+                <span class="text-gray-300 text-sm group-hover:text-gold transition-colors">家族</span>
+              </label>
+              <label class="flex items-center gap-2 cursor-pointer group">
+                <input type="radio" name="ご利用目的" value="その他" class="radio-gold">
+                <span class="text-gray-300 text-sm group-hover:text-gold transition-colors">その他</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- 個室希望 -->
+          <div>
+            <p class="text-gold text-xs tracking-widest mb-3">個室希望</p>
+            <div class="flex flex-wrap gap-6">
+              <label class="flex items-center gap-2 cursor-pointer group">
+                <input type="radio" name="個室希望" value="あり" class="radio-gold">
+                <span class="text-gray-300 text-sm group-hover:text-gold transition-colors">あり</span>
+              </label>
+              <label class="flex items-center gap-2 cursor-pointer group">
+                <input type="radio" name="個室希望" value="なし" class="radio-gold">
+                <span class="text-gray-300 text-sm group-hover:text-gold transition-colors">なし</span>
+              </label>
+              <label class="flex items-center gap-2 cursor-pointer group">
+                <input type="radio" name="個室希望" value="どちらでも" class="radio-gold" checked>
+                <span class="text-gray-300 text-sm group-hover:text-gold transition-colors">どちらでも</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- アレルギー・苦手な食材 -->
+          <div>
+            <label for="c-allergy" class="block text-gold text-xs tracking-widest mb-2">
+              アレルギー・苦手な食材
+              <span class="text-gray-500 text-xs font-normal ml-2">任意</span>
+            </label>
+            <textarea id="c-allergy" name="アレルギー・苦手な食材" rows="3"
+                      placeholder="例：エビ・カニアレルギー、レバーが苦手"
+                      class="form-input w-full bg-dark-4 border border-gold/20 rounded text-gray-200 text-sm px-4 py-3 placeholder-gray-600 focus:outline-none focus:border-gold transition-colors resize-none"></textarea>
+          </div>
+
+          <!-- エラーサマリー -->
+          <div id="form-error-summary" class="hidden border border-red-500/40 rounded p-4 bg-red-900/10">
+            <p class="text-red-400 text-xs">入力内容にご不備があります。各項目をご確認ください。</p>
+          </div>
+
+          <!-- 送信ボタン -->
+          <div class="pt-2">
+            <button type="submit" id="submit-btn"
+                    class="gold-btn w-full text-dark font-bold text-sm py-4 rounded tracking-widest shadow-lg">
+              送信する
+            </button>
+            <p class="text-gray-600 text-xs text-center mt-4 leading-relaxed">
+              ※ 送信後、確認メールをお送りします（Formspree 無料プラン：月50件まで）。<br>
+              1〜2営業日以内にご返信いたします。
+            </p>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- ===== Footer ===== -->
+  <footer class="bg-dark border-t border-gold/15 py-14 text-center">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-start gap-8 mb-10 text-left">
+        <div>
+          <p class="font-mincho text-2xl text-gold tracking-widest mb-1">和牛亭</p>
+          <p class="text-gray-500 text-xs tracking-wider mb-4">炭火焼肉 ／ 福岡市中央区</p>
+          <p class="text-gray-400 text-xs leading-relaxed">
+            〒810-0001<br>
+            福岡県福岡市中央区天神X-X-X<br>
+            TEL: 092-XXX-XXXX<br>
+            営業時間: 17:00〜23:00（月曜定休）
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-x-12 gap-y-2 text-xs">
+          <a href="#commitment" class="text-gray-500 hover:text-gold transition-colors">こだわり</a>
+          <a href="#rooms"      class="text-gray-500 hover:text-gold transition-colors">個室紹介</a>
+          <a href="#course"     class="text-gray-500 hover:text-gold transition-colors">コース</a>
+          <a href="#voice"      class="text-gray-500 hover:text-gold transition-colors">お客様の声</a>
+          <a href="#menu"       class="text-gray-500 hover:text-gold transition-colors">メニュー</a>
+          <a href="#access"     class="text-gray-500 hover:text-gold transition-colors">アクセス</a>
+          <a href="#contact"    class="text-gray-500 hover:text-gold transition-colors col-span-2">お問い合わせ</a>
+          <a href="#reserve"    class="text-gold hover:text-gold-light transition-colors font-bold col-span-2">
+            → ご予約はこちら
+          </a>
+        </div>
+      </div>
+      <div class="border-t border-gold/10 pt-8">
+        <p class="text-gray-600 text-xs tracking-wider">
+          © 2025 炭火焼肉 和牛亭. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+  </script>
+
+  <script>
+    (function () {
+      var form    = document.getElementById('contact-form');
+      if (!form) return;
+      var thanks    = document.getElementById('form-thanks');
+      var submitBtn = document.getElementById('submit-btn');
+      var errSum    = document.getElementById('form-error-summary');
+
+      // 日付の最小値を今日に設定
+      var dateInput = document.getElementById('c-date');
+      if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
+
+      function setErr(id, msg) {
+        var el  = document.getElementById(id + '-error');
+        var inp = document.getElementById(id);
+        if (el)  { el.textContent = msg; el.classList.remove('hidden'); }
+        if (inp) inp.classList.add('input-error');
+      }
+
+      function clearErr(id) {
+        var el  = document.getElementById(id + '-error');
+        var inp = document.getElementById(id);
+        if (el)  { el.textContent = ''; el.classList.add('hidden'); }
+        if (inp) inp.classList.remove('input-error');
+      }
+
+      function validateField(id) {
+        clearErr(id);
+        var inp = document.getElementById(id);
+        if (!inp) return true;
+        var val = inp.value.trim ? inp.value.trim() : inp.value;
+
+        if (id === 'c-name') {
+          if (!val) { setErr('c-name', 'お名前をご入力ください。'); return false; }
+
+        } else if (id === 'c-tel') {
+          if (!val) { setErr('c-tel', '電話番号をご入力ください。'); return false; }
+          var digits = val.replace(/[\-\(\)\+\s]/g, '');
+          if (!/^\d{10,11}$/.test(digits)) {
+            setErr('c-tel', '正しい電話番号の形式でご入力ください（例：090-1234-5678）。');
+            return false;
+          }
+
+        } else if (id === 'c-email') {
+          if (!val) { setErr('c-email', 'メールアドレスをご入力ください。'); return false; }
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
+            setErr('c-email', '正しいメールアドレスの形式でご入力ください。');
+            return false;
+          }
+
+        } else if (id === 'c-date') {
+          if (inp.value) {
+            var parts = inp.value.split('-');
+            var sel   = new Date(+parts[0], +parts[1] - 1, +parts[2]);
+            var today = new Date(); today.setHours(0, 0, 0, 0);
+            if (sel < today) {
+              setErr('c-date', '過去の日付はご選択いただけません。');
+              return false;
+            }
+          }
+        }
+        return true;
+      }
+
+      function validateAll() {
+        var ok = true;
+        ['c-name', 'c-tel', 'c-email', 'c-date'].forEach(function (id) {
+          if (!validateField(id)) ok = false;
+        });
+        return ok;
+      }
+
+      // フォーカスを外したときのリアルタイムバリデーション
+      ['c-name', 'c-tel', 'c-email', 'c-date'].forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) el.addEventListener('blur', function () { validateField(id); });
+      });
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!validateAll()) {
+          errSum.classList.remove('hidden');
+          errSum.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          return;
+        }
+        errSum.classList.add('hidden');
+        submitBtn.disabled = true;
+        submitBtn.textContent = '送信中...';
+
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function (res) {
+          if (res.ok) {
+            // LINE通知（fire-and-forget: 失敗してもフォーム送信の成功には影響しない）
+            try {
+              var fields = {};
+              new FormData(form).forEach(function (v, k) { fields[k] = v; });
+              fetch('/api/line-notify', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(fields),
+              }).catch(function () {});
+            } catch (e) {}
+
+            form.classList.add('hidden');
+            thanks.classList.remove('hidden');
+            setTimeout(function () { thanks.classList.add('visible'); }, 10);
+            thanks.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } else {
+            submitBtn.disabled = false;
+            submitBtn.textContent = '送信する';
+            alert('送信に失敗しました。しばらくしてから再度お試しください。');
+          }
+        }).catch(function () {
+          submitBtn.disabled = false;
+          submitBtn.textContent = '送信する';
+          alert('通信エラーが発生しました。ネットワーク接続をご確認の上、再度お試しください。');
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
