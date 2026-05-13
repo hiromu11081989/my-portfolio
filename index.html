@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>炭火焼肉 和牛村上亭 | 福岡市中央区 A5ランク黒毛和牛 完全個室</title>
+  <meta name="description" content="福岡市中央区の炭火焼肉 和牛村上亭。A5ランク黒毛和牛を産地直送でご提供。接待・記念日に最適な完全個室完備。特別なひとときをご堪能ください。">
+  <meta name="keywords" content="焼肉,和牛,A5,黒毛和牛,個室,接待,記念日,福岡,中央区,高級焼肉">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="炭火焼肉 和牛村上亭 | A5ランク黒毛和牛 完全個室">
+  <meta property="og:description" content="福岡市中央区。A5ランク黒毛和牛を産地直送。接待・記念日に最適な完全個室完備。">
+  <meta property="og:url" content="https://wagyu-tei.example.com">
+  <meta property="og:image" content="https://placehold.co/1200x630/1a1a1a/c9a84c?text=炭火焼肉+和牛村上亭">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="炭火焼肉 和牛村上亭">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="炭火焼肉 和牛村上亭 | A5ランク黒毛和牛">
+  <meta name="twitter:description" content="福岡市中央区。A5ランク黒毛和牛を産地直送。完全個室完備。">
+  <meta name="twitter:image" content="https://placehold.co/1200x630/1a1a1a/c9a84c?text=炭火焼肉+和牛村上亭">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold:        '#c9a84c',
+            'gold-light':'#e8c97a',
+            'gold-dark': '#a8873a',
+            'dark':      '#1a1a1a',
+            'dark-2':    '#222222',
+            'dark-3':    '#2a2a2a',
+            'dark-4':    '#333333',
+          },
+          fontFamily: {
+            mincho: ['"Hiragino Mincho ProN"', '"Yu Mincho"', '"YuMincho"', 'Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'Yu Gothic', 'YuGothic', sans-serif;
+      background: #1a1a1a;
+      color: #e5e5e5;
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #1a1a1a; }
+    ::-webkit-scrollbar-thumb { background: #c9a84c; border-radius: 3px; }
+
+    .gold-text { color: #c9a84c; }
+    .gold-border { border-color: #c9a84c; }
+
+    .hero-bg {
+      background-image: url('https://images.unsplash.com/photo-1708388064672-6536507fdf6e?w=1920&h=1080&fit=crop&auto=format&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .section-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 16px auto 0;
+    }
+    .section-divider::before,
+    .section-divider::after {
+      content: '';
+      width: 40px;
+      height: 1px;
+      background: #c9a84c;
+    }
+    .section-divider-diamond {
+      width: 6px;
+      height: 6px;
+      background: #c9a84c;
+      transform: rotate(45deg);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(201,168,76,0.2);
+    }
+
+    .gold-btn {
+      background: linear-gradient(135deg, #c9a84c 0%, #e8c97a 50%, #c9a84c 100%);
+      background-size: 200% 100%;
+      transition: background-position 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .gold-btn:hover {
+      background-position: 100% 0;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(201,168,76,0.4);
+    }
+
+    .menu-img-wrap { overflow: hidden; }
+    .menu-img-wrap img {
+      transition: transform 0.5s ease;
+    }
+    .menu-img-wrap:hover img { transform: scale(1.05); }
+
+    .nav-link {
+      position: relative;
+      color: #d4d4d4;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      transition: color 0.2s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #c9a84c;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover { color: #c9a84c; }
+    .nav-link:hover::after { width: 100%; }
+
+    .course-badge {
+      background: linear-gradient(135deg, #c9a84c, #e8c97a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .star-gold { color: #c9a84c; }
+
+    /* ===== Contact Form ===== */
+    .form-input {
+      -webkit-appearance: none;
+      appearance: none;
+      color-scheme: dark;
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(0.7) sepia(1) saturate(2) hue-rotate(5deg);
+      opacity: 0.7;
+      cursor: pointer;
+    }
+    select option {
+      background: #333333;
+      color: #e5e5e5;
+    }
+    .radio-gold {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 50%;
+      background: #2a2a2a;
+      cursor: pointer;
+      flex-shrink: 0;
+      position: relative;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .radio-gold:checked { border-color: #c9a84c; }
+    .radio-gold:checked::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #c9a84c;
+    }
+    .radio-gold:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(201,168,76,0.25);
+    }
+    .input-error { border-color: rgba(239,68,68,0.6) !important; }
+
+    /* ===== Service tile grid ===== */
+    .service-tile {
+      position: relative;
+      overflow: hidden;
+    }
+    .service-tile .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(26,26,26,0.55);
+      transition: background 0.3s ease;
+    }
+    .service-tile:hover .overlay {
+      background: rgba(26,26,26,0.35);
+    }
+    .service-tile .content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    /* ===== News list ===== */
+    .news-item {
+      border-bottom: 1px solid rgba(201,168,76,0.12);
+      transition: background 0.2s;
+    }
+    .news-item:hover {
+      background: rgba(201,168,76,0.04);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="fixed top-0 w-full z-50 bg-dark/95 backdrop-blur-sm border-b border-gold/20">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#top" class="flex flex-col leading-tight">
+        <span class="text-gold font-mincho text-xl tracking-widest">和牛村上亭</span>
+        <span class="text-gray-400 text-xs tracking-wider">炭火焼肉</span>
+      </a>
+      <div class="hidden md:flex items-center gap-7">
+        <a href="#top"        class="nav-link">TOP</a>
+        <a href="#story"      class="nav-link">STORY</a>
+        <a href="#promise"    class="nav-link">PROMISE</a>
+        <a href="#service"    class="nav-link">SERVICE</a>
+        <a href="course.html" class="nav-link">COURSE</a>
+        <a href="#news"       class="nav-link">NEWS</a>
+        <a href="#recruit"    class="nav-link">RECRUIT</a>
+        <a href="#access"     class="nav-link">SHOP</a>
+      </div>
+      <a href="#reserve"
+         class="gold-btn text-dark font-bold text-xs px-6 py-2.5 rounded tracking-widest">
+        ご予約
+      </a>
+    </div>
+  </nav>
+
+
+  <!-- ===== 1. Hero ===== -->
+  <section id="top" class="hero-bg relative min-h-screen flex items-center justify-center pt-14">
+    <div class="absolute inset-0 bg-dark/75"></div>
+
+    <div class="absolute inset-8 md:inset-16 border border-gold/20 pointer-events-none hidden md:block"></div>
+
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <p class="text-gold text-xs tracking-[0.4em] mb-8 font-light">— CHARCOAL GRILLED WAGYU —</p>
+
+      <h1 class="font-mincho text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6 tracking-wider">
+        至福の一皿を、<br>
+        <span class="text-gold">あなたに。</span>
+      </h1>
+
+      <p class="text-gray-300 text-base md:text-lg mb-4 leading-relaxed tracking-wide">
+        A5ランク黒毛和牛 産地直送 ／ 完全個室完備
+      </p>
+      <p class="text-gray-400 text-sm mb-12 tracking-wider">
+        福岡市中央区 ／ 接待・記念日に選ばれる炭火焼肉
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#reserve"
+           class="gold-btn text-dark font-bold text-base px-12 py-4 rounded tracking-widest shadow-xl">
+          ご予約はこちら
+        </a>
+        <a href="#service"
+           class="border border-gold/60 text-gold font-bold text-base px-12 py-4 rounded tracking-widest
+                  hover:bg-gold/10 transition-colors">
+          サービスを見る
+        </a>
+      </div>
+
+      <p class="text-gray-500 text-xs mt-8 tracking-wider">
+        TEL: 092-XXX-XXXX ／ 営業時間 17:00〜23:00
+      </p>
+    </div>
+
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-5 h-5 text-gold/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </div>
+  </section>
+
+
+  <!-- ===== 2. STORY ===== -->
+  <section id="story" class="py-24 bg-dark-2">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-16 fade-in">
+        <p class="text-gold text-xs tracking-[0.4em] mb-4">STORY</p>
+        <h2 class="font-mincho text-3xl md:text-4xl text-white tracking-wider">和牛村上亭の物語</h2>
+        <div class="section-divider">
+          <div class="section-divider-diamond"></div>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+        <div class="fade-in w-full md:w-1/2 menu-img-wrap rounded overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1776584339515-f85590182189?w=720&h=540&fit=crop&auto=format&q=80"
+               alt="和牛村上亭 シェフ" class="w-full object-cover">
+        </div>
+        <div class="fade-in w-full md:w-1/2">
+          <p class="text-gold text-xs tracking-[0.3em] mb-6">— OUR HISTORY —</p>
+          <blockquote class="font-mincho text-xl md:text-2xl text-white leading-relaxed mb-8 tracking-wide">
+            「本物の和牛と、<br>
+            心からのおもてなしで、<br>
+            一生忘れられない夜を。」
+          </blockquote>
+          <div class="w-8 h-px bg-gold/40 mb-8"></div>
+          <p class="text-gray-400 text-sm leading-[2.2] mb-4">
+            和牛村上亭は、九州の豊かな大地で育まれたA5ランク黒毛和牛を、お客様のもとへ直接お届けするために生まれました。
+            創業以来、一頭一頭を吟味し、熟練の職人が最高の状態でご提供することにこだわり続けています。
+          </p>
+          <p class="text-gray-400 text-sm leading-[2.2] mb-10">
+            「接待でも、記念日でも、家族の集まりでも——大切な場面には、最上の食材と空間が必要だ」という信念のもと、
+            完全個室での炭火焼肉というスタイルを追求してきました。
+            その想いは今も変わらず、スタッフ一同の誇りです。
+          </p>
+          <a href="#promise"
+             class="inline-flex items-center gap-2 text-gold text-sm tracking-widest hover:text-gold-light transition-colors">
+            私たちの約束を見る
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 3. PROMISE ===== -->
+  <section id="promise" class="py-24 bg-dark">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-16 fade-in">
+        <p class="text-gold text-xs tracking-[0.4em] mb-4">PROMISE</p>
+        <h2 class="font-mincho text-3xl md:text-4xl text-white tracking-wider">和牛村上亭の三つの約束</h2>
+        <div class="section-divider">
+          <div class="section-divider-diamond"></div>
+        </div>
+        <p class="text-gray-400 text-sm mt-6">妥協なき品質と、心からのおもてなしをお約束します。</p>
+      </div>
+
+      <!-- 約束1: 画像左・テキスト右 -->
+      <div class="fade-in flex flex-col md:flex-row items-stretch gap-0 border border-gold/20 rounded overflow-hidden mb-8">
+        <div class="w-full md:w-5/12 menu-img-wrap">
+          <img src="https://images.unsplash.com/photo-1615937691194-97dbd3f3dc29?w=720&h=480&fit=crop&auto=format&q=80"
+               alt="A5黒毛和牛 産地直送" class="w-full h-64 md:h-full object-cover">
+        </div>
+        <div class="w-full md:w-7/12 bg-dark-3 p-8 md:p-12 flex flex-col justify-center">
+          <p class="text-gold text-xs tracking-[0.4em] mb-4">PROMISE 01</p>
+          <h3 class="font-mincho text-2xl md:text-3xl text-white mb-4 tracking-wide">
+            産地直送 A5ランク黒毛和牛
+          </h3>
+          <div class="w-8 h-px bg-gold/40 mb-6"></div>
+          <p class="text-gray-400 text-sm leading-[2.2]">
+            九州の厳選牧場と直接契約し、A5ランク黒毛和牛を一頭買いで仕入れています。
+            きめ細やかな霜降りと豊かな旨味、そして希少部位まで余すことなくお楽しみいただけます。
+            産地・ランク・血統まで把握した食材だけを、お客様の食卓にお届けします。
+          </p>
+        </div>
+      </div>
+
+      <!-- 約束2: テキスト左・画像右 -->
+      <div class="fade-in flex flex-col md:flex-row-reverse items-stretch gap-0 border border-gold/20 rounded overflow-hidden mb-8">
+        <div class="w-full md:w-5/12 menu-img-wrap">
+          <img src="https://images.unsplash.com/photo-1611354609291-69aba96e45df?w=720&h=480&fit=crop&auto=format&q=80"
+               alt="炭火焼き 職人の技" class="w-full h-64 md:h-full object-cover">
+        </div>
+        <div class="w-full md:w-7/12 bg-dark-3 p-8 md:p-12 flex flex-col justify-center">
+          <p class="text-gold text-xs tracking-[0.4em] mb-4">PROMISE 02</p>
+          <h3 class="font-mincho text-2xl md:text-3xl text-white mb-4 tracking-wide">
+            職人が磨く、炭火の技
+          </h3>
+          <div class="w-8 h-px bg-gold/40 mb-6"></div>
+          <p class="text-gray-400 text-sm leading-[2.2]">
+            備長炭の遠赤外線で、肉本来の旨味を閉じ込める炭火焼き。
+            熟練のスタッフが肉の部位・厚み・脂の乗りに合わせて最適な焼き加減をご案内します。
+            黒毛和牛が最も輝く一瞬を、ともに楽しんでいただくことが私たちの誇りです。
+          </p>
+        </div>
+      </div>
+
+      <!-- 約束3: 画像左・テキスト右 -->
+      <div class="fade-in flex flex-col md:flex-row items-stretch gap-0 border border-gold/20 rounded overflow-hidden">
+        <div class="w-full md:w-5/12 menu-img-wrap">
+          <img src="https://images.unsplash.com/photo-1635321594488-2d38af11ed03?w=720&h=480&fit=crop&auto=format&q=80"
+               alt="完全個室 おもてなし" class="w-full h-64 md:h-full object-cover">
+        </div>
+        <div class="w-full md:w-7/12 bg-dark-3 p-8 md:p-12 flex flex-col justify-center">
+          <p class="text-gold text-xs tracking-[0.4em] mb-4">PROMISE 03</p>
+          <h3 class="font-mincho text-2xl md:text-3xl text-white mb-4 tracking-wide">
+            完全個室と心づくしのおもてなし
+          </h3>
+          <div class="w-8 h-px bg-gold/40 mb-6"></div>
+          <p class="text-gray-400 text-sm leading-[2.2]">
+            全席が完全個室。接待・記念日・家族のお祝いなど、大切な場面を他のお客様を気にせずお過ごしいただけます。
+            バースデーサプライズや接待アレンジなど、お客様の「こうしたい」に
+            スタッフ一同が心を込めてお応えします。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 4. SERVICE ===== -->
+  <section id="service" class="py-24 bg-dark-2">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-16 fade-in">
+        <p class="text-gold text-xs tracking-[0.4em] mb-4">SERVICE</p>
+        <h2 class="font-mincho text-3xl md:text-4xl text-white tracking-wider">サービス</h2>
+        <div class="section-divider">
+          <div class="section-divider-diamond"></div>
+        </div>
+        <p class="text-gray-400 text-sm mt-6">和牛村上亭でお楽しみいただけるすべてのサービスをご案内します。</p>
+      </div>
+
+      <!-- 上段: 大2タイル -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <!-- レストラン -->
+        <a href="#reserve" class="fade-in service-tile card-hover rounded overflow-hidden block">
+          <img src="https://images.unsplash.com/photo-1692899667309-f99fc00ed0df?w=720&h=400&fit=crop&auto=format&q=80"
+               alt="レストラン" class="w-full aspect-[16/9] object-cover">
+          <div class="overlay"></div>
+          <div class="content">
+            <p class="text-gold text-xs tracking-[0.3em] mb-2">RESTAURANT</p>
+            <h3 class="font-mincho text-2xl md:text-3xl text-white tracking-wide mb-3">レストラン</h3>
+            <div class="w-8 h-px bg-gold/60 mb-3"></div>
+            <p class="text-gray-300 text-xs text-center leading-relaxed max-w-xs">
+              完全個室でA5黒毛和牛の炭火焼肉をご堪能ください
+            </p>
+          </div>
+        </a>
+
+        <!-- コース料理 -->
+        <a href="course.html" class="fade-in service-tile card-hover rounded overflow-hidden block">
+          <img src="https://images.unsplash.com/photo-1629684782790-385ed5adb497?w=720&h=400&fit=crop&auto=format&q=80"
+               alt="コース料理" class="w-full aspect-[16/9] object-cover">
+          <div class="overlay"></div>
+          <div class="content">
+            <p class="text-gold text-xs tracking-[0.3em] mb-2">COURSE MENU</p>
+            <h3 class="font-mincho text-2xl md:text-3xl text-white tracking-wide mb-3">コース料理</h3>
+            <div class="w-8 h-px bg-gold/60 mb-3"></div>
+            <p class="text-gray-300 text-xs text-center leading-relaxed max-w-xs">
+              ¥8,800〜¥19,800の厳選3コースをご用意
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <!-- 下段: 小3タイル -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- 個室宴会 -->
+        <a href="#reserve" class="fade-in service-tile card-hover rounded overflow-hidden block">
+          <img src="https://images.unsplash.com/photo-1769638913500-4a0b6ac4561a?w=480&h=320&fit=crop&auto=format&q=80"
+               alt="個室宴会" class="w-full aspect-[3/2] object-cover">
+          <div class="overlay"></div>
+          <div class="content">
+            <p class="text-gold text-xs tracking-[0.3em] mb-2">PRIVATE ROOM</p>
+            <h3 class="font-mincho text-xl text-white tracking-wide mb-2">個室宴会</h3>
+            <p class="text-gray-300 text-xs text-center leading-relaxed">
+              2名〜8名まで対応
+            </p>
+          </div>
+        </a>
+
+        <!-- お土産・ギフト -->
+        <a href="#contact" class="fade-in service-tile card-hover rounded overflow-hidden block">
+          <img src="https://images.unsplash.com/photo-1690983323238-0b91789e1b5a?w=480&h=320&fit=crop&auto=format&q=80"
+               alt="ギフト・贈り物" class="w-full aspect-[3/2] object-cover">
+          <div class="overlay"></div>
+          <div class="content">
+            <p class="text-gold text-xs tracking-[0.3em] mb-2">GIFT</p>
+            <h3 class="font-mincho text-xl text-white tracking-wide mb-2">ギフト・贈り物</h3>
+            <p class="text-gray-300 text-xs text-center leading-relaxed">
+              産地直送和牛を贈り物に
+            </p>
+          </div>
+        </a>
+
+        <!-- オンライン予約 -->
+        <a href="#reserve" class="fade-in service-tile card-hover rounded overflow-hidden block">
+          <img src="https://images.unsplash.com/photo-1556742205-e10c9486e506?w=480&h=320&fit=crop&auto=format&q=80"
+               alt="オンライン予約" class="w-full aspect-[3/2] object-cover">
+          <div class="overlay"></div>
+          <div class="content">
+            <p class="text-gold text-xs tracking-[0.3em] mb-2">ONLINE RESERVE</p>
+            <h3 class="font-mincho text-xl text-white tracking-wide mb-2">オンライン予約</h3>
+            <p class="text-gray-300 text-xs text-center leading-relaxed">
+              24時間いつでも予約受付
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 5. NEWS ===== -->
+  <section id="news" class="py-24 bg-dark">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-16 fade-in">
+        <p class="text-gold text-xs tracking-[0.4em] mb-4">NEWS</p>
+        <h2 class="font-mincho text-3xl md:text-4xl text-white tracking-wider">新着情報</h2>
+        <div class="section-divider">
+          <div class="section-divider-diamond"></div>
+        </div>
+      </div>
+
+      <div class="fade-in max-w-3xl mx-auto">
+        <!-- ニュース1 -->
+        <article class="news-item flex flex-col sm:flex-row sm:items-start gap-4 px-2 py-6">
+          <div class="flex-shrink-0 flex items-center gap-4">
+            <time class="text-gray-500 text-sm tracking-wider font-mincho">2026.05.10</time>
+            <span class="text-xs px-2.5 py-0.5 border border-gold/40 text-gold tracking-wider">お知らせ</span>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed hover:text-white transition-colors cursor-pointer">
+            【重要】GW期間中の営業時間についてのご案内。5月3日〜6日は通常より1時間早くオープンいたします（16:00〜）。
+          </p>
+        </article>
+
+        <!-- ニュース2 -->
+        <article class="news-item flex flex-col sm:flex-row sm:items-start gap-4 px-2 py-6">
+          <div class="flex-shrink-0 flex items-center gap-4">
+            <time class="text-gray-500 text-sm tracking-wider font-mincho">2026.04.20</time>
+            <span class="text-xs px-2.5 py-0.5 border border-gold/40 text-gold tracking-wider">メニュー</span>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed hover:text-white transition-colors cursor-pointer">
+            春の新メニュー「春野菜と和牛の特選プレート」が登場しました。旬の素材とA5黒毛和牛の贅沢な組み合わせをぜひご堪能ください。
+          </p>
+        </article>
+
+        <!-- ニュース3 -->
+        <article class="news-item flex flex-col sm:flex-row sm:items-start gap-4 px-2 py-6">
+          <div class="flex-shrink-0 flex items-center gap-4">
+            <time class="text-gray-500 text-sm tracking-wider font-mincho">2026.03.15</time>
+            <span class="text-xs px-2.5 py-0.5 border border-gold/40 text-gold tracking-wider">イベント</span>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed hover:text-white transition-colors cursor-pointer">
+            4月より「一頭買いフェア」を開催いたします。通常提供していない希少部位を期間限定でご用意。数量限定のため、お早めのご予約をおすすめします。
+          </p>
+        </article>
+
+        <!-- ニュース4 -->
+        <article class="flex flex-col sm:flex-row sm:items-start gap-4 px-2 py-6">
+          <div class="flex-shrink-0 flex items-center gap-4">
+            <time class="text-gray-500 text-sm tracking-wider font-mincho">2026.02.28</time>
+            <span class="text-xs px-2.5 py-0.5 border border-gold/40 text-gold tracking-wider">採用</span>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed hover:text-white transition-colors cursor-pointer">
+            スタッフ採用情報を更新しました。未経験者歓迎・研修制度充実。一緒に和牛村上亭を盛り上げてくださる方を募集しています。
+          </p>
+        </article>
+      </div>
+
+      <div class="text-center mt-12 fade-in">
+        <a href="#contact"
+           class="inline-flex items-center gap-2 border border-gold/50 text-gold text-xs px-8 py-3
+                  tracking-widest hover:bg-gold/10 transition-colors rounded">
+          すべてのお知らせを見る
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 6. RECRUIT ===== -->
+  <section id="recruit" class="py-24 bg-dark-2">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-16 fade-in">
+        <p class="text-gold text-xs tracking-[0.4em] mb-4">RECRUIT</p>
+        <h2 class="font-mincho text-3xl md:text-4xl text-white tracking-wider">スタッフ募集</h2>
+        <div class="section-divider">
+          <div class="section-divider-diamond"></div>
+        </div>
+        <p class="text-gray-400 text-sm mt-6">一緒に、最高の食の体験を作りませんか。</p>
+      </div>
+
+      <!-- スタッフの声 -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <!-- スタッフ1 -->
+        <div class="fade-in bg-dark-3 border border-gold/15 rounded p-7 relative hover:border-gold/40 transition-colors">
+          <div class="text-gold/10 font-serif text-8xl absolute top-2 left-5 leading-none select-none">"</div>
+          <div class="flex items-center gap-4 mb-5">
+            <div class="w-12 h-12 rounded-full bg-dark-4 border border-gold/30 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-gold/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-gold font-mincho text-sm tracking-wide">田中 誠</p>
+              <p class="text-gray-500 text-xs">ホールスタッフ / 入社3年目</p>
+            </div>
+          </div>
+          <p class="text-gray-300 text-sm leading-loose">
+            お客様の笑顔が何より嬉しい。記念日のサプライズを成功させたときの感動は、この仕事を続ける原動力になっています。
+            チームの雰囲気も良く、毎日が充実しています。
+          </p>
+        </div>
+
+        <!-- スタッフ2 -->
+        <div class="fade-in bg-dark-3 border border-gold/15 rounded p-7 relative hover:border-gold/40 transition-colors">
+          <div class="text-gold/10 font-serif text-8xl absolute top-2 left-5 leading-none select-none">"</div>
+          <div class="flex items-center gap-4 mb-5">
+            <div class="w-12 h-12 rounded-full bg-dark-4 border border-gold/30 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-gold/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-gold font-mincho text-sm tracking-wide">山本 あかり</p>
+              <p class="text-gray-500 text-xs">ホールスタッフ / 入社1年目</p>
+            </div>
+          </div>
+          <p class="text-gray-300 text-sm leading-loose">
+            飲食未経験でも、丁寧な研修制度のおかげで安心して働けました。
+            先輩スタッフが親身に教えてくれる環境で、今では接客に自信がつきました。
+          </p>
+        </div>
+
+        <!-- スタッフ3 -->
+        <div class="fade-in bg-dark-3 border border-gold/15 rounded p-7 relative hover:border-gold/40 transition-colors">
+          <div class="text-gold/10 font-serif text-8xl absolute top-2 left-5 leading-none select-none">"</div>
+          <div class="flex items-center gap-4 mb-5">
+            <div class="w-12 h-12 rounded-full bg-dark-4 border border-gold/30 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-gold/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-gold font-mincho text-sm tracking-wide">佐藤 健一</p>
+              <p class="text-gray-500 text-xs">キッチンスタッフ / 入社5年目</p>
+            </div>
+          </div>
+          <p class="text-gray-300 text-sm leading-loose">
+            最高の食材を扱う誇りがあります。一頭買いの和牛を最高の状態でお客様にお届けするため、
+            毎日技術を磨いています。ここで働くことで、食の世界の奥深さを学べました。
+          </p>
+        </div>
+      </div>
+
+      <!-- 採用情報CTA -->
+      <div class="fade-in border border-gold/20 rounded bg-dark-3 p-8 md:p-12 text-center">
+        <p class="text-gold text-xs tracking-[0.4em] mb-4">JOIN US</p>
+        <h3 class="font-mincho text-2xl md:text-3xl text-white mb-6 tracking-wide">
+          ともに、最高のひとときを届けよう。
+        </h3>
+        <p class="text-gray-400 text-sm leading-[2.2] mb-8 max-w-2xl mx-auto">
+          未経験者歓迎。充実した研修制度と、温かいチームが待っています。
+          「食で人を幸せにしたい」という想いがあれば、あなたの経験は問いません。
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <div class="text-left border border-gold/20 rounded p-5 flex-1 max-w-xs mx-auto sm:mx-0">
+            <p class="text-gold text-xs tracking-wider mb-3">募集職種</p>
+            <ul class="space-y-2 text-sm text-gray-300">
+              <li class="flex items-center gap-2">
+                <span class="w-1 h-1 rounded-full bg-gold flex-shrink-0"></span>ホールスタッフ（正社員・アルバイト）
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1 h-1 rounded-full bg-gold flex-shrink-0"></span>キッチンスタッフ（正社員・アルバイト）
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1 h-1 rounded-full bg-gold flex-shrink-0"></span>店長候補（正社員）
+              </li>
+            </ul>
+          </div>
+          <div class="text-left border border-gold/20 rounded p-5 flex-1 max-w-xs mx-auto sm:mx-0">
+            <p class="text-gold text-xs tracking-wider mb-3">待遇・福利厚生</p>
+            <ul class="space-y-2 text-sm text-gray-300">
+              <li class="flex items-center gap-2">
+                <span class="w-1 h-1 rounded-full bg-gold flex-shrink-0"></span>未経験歓迎・充実の研修制度
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1 h-1 rounded-full bg-gold flex-shrink-0"></span>まかない食あり
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1 h-1 rounded-full bg-gold flex-shrink-0"></span>社会保険完備（正社員）
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a href="#contact"
+           class="mt-8 inline-block gold-btn text-dark font-bold text-sm px-12 py-4 rounded tracking-widest shadow-lg">
+          採用に応募する
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 7. アクセス・営業時間 ===== -->
+  <section id="access" class="py-24 bg-dark">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-16 fade-in">
+        <p class="text-gold text-xs tracking-[0.4em] mb-4">SHOP</p>
+        <h2 class="font-mincho text-3xl md:text-4xl text-white tracking-wider">アクセス・営業時間</h2>
+        <div class="section-divider">
+          <div class="section-divider-diamond"></div>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-8 md:gap-12">
+        <!-- 地図エリア -->
+        <div class="fade-in w-full md:w-1/2">
+          <div class="bg-dark-3 border border-gold/20 rounded aspect-[4/3] flex flex-col items-center justify-center">
+            <svg class="w-12 h-12 text-gold mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0
+                       1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <p class="text-gold font-mincho tracking-widest">Google Map</p>
+            <p class="text-gray-500 text-sm mt-1">福岡市中央区</p>
+            <a href="#" class="mt-4 text-xs text-gold/60 underline hover:text-gold transition-colors">
+              地図を開く →
+            </a>
+          </div>
+
+          <!-- 駐車場情報 -->
+          <div class="mt-4 border border-gold/20 rounded p-5 bg-dark-3">
+            <h4 class="text-gold text-sm font-bold mb-3 flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+              </svg>
+              駐車場情報
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li class="flex items-start gap-2">
+                <span class="text-gold mt-0.5">●</span>
+                店舗専用駐車場あり（3台）／ご予約時にお伝えください
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-gold mt-0.5">●</span>
+                近隣コインパーキング複数あり（徒歩1〜3分）
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-gold mt-0.5">●</span>
+                2時間まで駐車サービス券をご提供（¥13,200コース以上）
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 店舗情報 -->
+        <div class="fade-in w-full md:w-1/2">
+          <dl class="space-y-5">
+            <div class="flex gap-5 pb-5 border-b border-gold/10">
+              <dt class="text-gold text-xs tracking-widest w-20 flex-shrink-0 pt-1 font-mincho">店名</dt>
+              <dd class="text-gray-200 text-sm leading-relaxed font-mincho text-lg">炭火焼肉 和牛村上亭</dd>
+            </div>
+            <div class="flex gap-5 pb-5 border-b border-gold/10">
+              <dt class="text-gold text-xs tracking-widest w-20 flex-shrink-0 pt-1">住所</dt>
+              <dd class="text-gray-300 text-sm leading-relaxed">
+                〒810-0001<br>福岡県福岡市中央区天神X-X-X<br>和牛村上亭ビル 1F
+              </dd>
+            </div>
+            <div class="flex gap-5 pb-5 border-b border-gold/10">
+              <dt class="text-gold text-xs tracking-widest w-20 flex-shrink-0 pt-1">アクセス</dt>
+              <dd class="text-gray-300 text-sm leading-relaxed">
+                福岡市地下鉄空港線「天神駅」より徒歩5分<br>
+                西鉄「福岡（天神）駅」より徒歩7分
+              </dd>
+            </div>
+            <div class="flex gap-5 pb-5 border-b border-gold/10">
+              <dt class="text-gold text-xs tracking-widest w-20 flex-shrink-0 pt-1">電話</dt>
+              <dd class="text-sm">
+                <a href="tel:092-XXX-XXXX"
+                   class="text-gray-200 hover:text-gold transition-colors font-bold text-lg">
+                  092-XXX-XXXX
+                </a>
+              </dd>
+            </div>
+            <div class="flex gap-5 pb-5 border-b border-gold/10">
+              <dt class="text-gold text-xs tracking-widest w-20 flex-shrink-0 pt-1">営業時間</dt>
+              <dd class="text-gray-300 text-sm leading-relaxed">
+                17:00 〜 23:00（L.O. 22:00）<br>
+                <span class="text-gray-500 text-xs">土・日・祝日 16:00 〜 23:00</span>
+              </dd>
+            </div>
+            <div class="flex gap-5">
+              <dt class="text-gold text-xs tracking-widest w-20 flex-shrink-0 pt-1">定休日</dt>
+              <dd class="text-gray-300 text-sm">月曜日（祝日の場合は翌火曜日）</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 8. 予約CTA ===== -->
+  <section id="reserve" class="py-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-dark-2"></div>
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-0 left-1/4 w-96 h-96 rounded-full bg-gold"></div>
+      <div class="absolute bottom-0 right-1/4 w-64 h-64 rounded-full bg-gold"></div>
+    </div>
+    <div class="absolute inset-6 md:inset-12 border border-gold/10 pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <div class="fade-in">
+        <p class="text-gold text-xs tracking-[0.4em] mb-6">RESERVATION</p>
+        <h2 class="font-mincho text-3xl md:text-5xl text-white leading-tight mb-4 tracking-wider">
+          特別なひとときを、<br>
+          <span class="text-gold">今すぐご予約ください。</span>
+        </h2>
+        <p class="text-gray-400 text-base mb-12 leading-relaxed">
+          接待・記念日・大切な方へのご馳走に。<br class="hidden md:block">
+          完全個室でA5黒毛和牛の至福の時間をご用意しています。
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-5 justify-center mb-12">
+          <!-- 電話予約 -->
+          <a href="tel:092-XXX-XXXX"
+             class="flex items-center justify-center gap-3 bg-dark-3 border border-gold text-gold
+                    font-bold text-lg px-10 py-5 rounded hover:bg-gold/10 transition-all
+                    transform hover:-translate-y-1 shadow-xl">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037
+                       11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1
+                       1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+            </svg>
+            <span>
+              <span class="block text-xs font-normal text-gray-400 mb-0.5">お電話でのご予約</span>
+              092-XXX-XXXX
+            </span>
+          </a>
+
+          <!-- ネット予約 -->
+          <a href="#"
+             class="gold-btn flex items-center justify-center gap-3 text-dark font-bold text-lg
+                    px-10 py-5 rounded shadow-xl">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0
+                       00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+            <span>
+              <span class="block text-xs font-normal text-dark/70 mb-0.5">24時間受付</span>
+              ネット予約はこちら
+            </span>
+          </a>
+        </div>
+
+        <!-- 注意事項 -->
+        <div class="border border-gold/20 rounded p-6 max-w-2xl mx-auto text-left">
+          <h4 class="text-gold text-sm font-bold mb-3">ご予約の際のご注意</h4>
+          <ul class="space-y-2 text-gray-400 text-xs leading-relaxed">
+            <li class="flex items-start gap-2">
+              <span class="text-gold flex-shrink-0">・</span>
+              コースのご予約は前日17:00までにお願いします
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gold flex-shrink-0">・</span>
+              記念日・サプライズ演出のご要望は予約時にお申し付けください
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gold flex-shrink-0">・</span>
+              キャンセルはご予約日2日前までにご連絡ください（前日・当日はキャンセル料が発生する場合があります）
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gold flex-shrink-0">・</span>
+              8名以上の大人数ご利用はお電話にてご相談ください
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 9. お問い合わせフォーム ===== -->
+  <section id="contact" class="py-24 bg-dark-2">
+    <div class="max-w-3xl mx-auto px-4">
+
+      <div class="text-center mb-16 fade-in">
+        <p class="text-gold text-xs tracking-[0.4em] mb-4">CONTACT & RESERVATION</p>
+        <h2 class="font-mincho text-3xl md:text-4xl text-white tracking-wider">ご予約・お問い合わせ</h2>
+        <div class="section-divider">
+          <div class="section-divider-diamond"></div>
+        </div>
+        <p class="text-gray-400 text-sm mt-6 leading-relaxed">
+          フォームよりご予約・お問い合わせいただけます。<br>
+          内容確認後、1〜2営業日以内にご返信いたします。
+        </p>
+      </div>
+
+      <!-- サンクスメッセージ -->
+      <div id="form-thanks"
+           class="hidden text-center py-16 border border-gold/30 rounded bg-dark-3 px-8 fade-in">
+        <div class="w-16 h-16 mx-auto mb-6 border border-gold rounded-full flex items-center justify-center">
+          <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"/>
+          </svg>
+        </div>
+        <h3 class="font-mincho text-2xl text-gold mb-4 tracking-wide">お問い合わせを承りました</h3>
+        <p class="text-gray-400 text-sm leading-loose">
+          この度はお問い合わせいただきありがとうございます。<br>
+          内容を確認の上、1〜2営業日以内にご連絡いたします。<br>
+          しばらくお待ちください。
+        </p>
+      </div>
+
+      <!-- フォーム -->
+      <form id="contact-form"
+            action="https://formspree.io/f/maqvkeaj"
+            method="POST"
+            class="fade-in border border-gold/20 rounded bg-dark-3 p-8 md:p-12"
+            novalidate>
+
+        <div class="space-y-7">
+
+          <!-- お名前 -->
+          <div>
+            <label for="c-name" class="block text-gold text-xs tracking-widest mb-2">
+              お名前 <span class="text-red-400 ml-1 font-normal">必須</span>
+            </label>
+            <input type="text" id="c-name" name="お名前"
+                   placeholder="山田 太郎"
+                   autocomplete="name"
+                   class="form-input w-full bg-dark-4 border border-gold/20 rounded text-gray-200 text-sm px-4 py-3 placeholder-gray-600 focus:outline-none focus:border-gold transition-colors">
+            <p id="c-name-error" class="hidden text-red-400 text-xs mt-1.5"></p>
+          </div>
+
+          <!-- 電話番号 -->
+          <div>
+            <label for="c-tel" class="block text-gold text-xs tracking-widest mb-2">
+              電話番号 <span class="text-red-400 ml-1 font-normal">必須</span>
+            </label>
+            <input type="tel" id="c-tel" name="電話番号"
+                   placeholder="090-1234-5678"
+                   autocomplete="tel"
+                   class="form-input w-full bg-dark-4 border border-gold/20 rounded text-gray-200 text-sm px-4 py-3 placeholder-gray-600 focus:outline-none focus:border-gold transition-colors">
+            <p id="c-tel-error" class="hidden text-red-400 text-xs mt-1.5"></p>
+          </div>
+
+          <!-- メールアドレス -->
+          <div>
+            <label for="c-email" class="block text-gold text-xs tracking-widest mb-2">
+              メールアドレス <span class="text-red-400 ml-1 font-normal">必須</span>
+            </label>
+            <input type="email" id="c-email" name="メールアドレス"
+                   placeholder="example@email.com"
+                   autocomplete="email"
+                   class="form-input w-full bg-dark-4 border border-gold/20 rounded text-gray-200 text-sm px-4 py-3 placeholder-gray-600 focus:outline-none focus:border-gold transition-colors">
+            <p id="c-email-error" class="hidden text-red-400 text-xs mt-1.5"></p>
+          </div>
+
+          <!-- ご利用日・ご利用時間 -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="c-date" class="block text-gold text-xs tracking-widest mb-2">ご利用日</label>
+              <input type="date" id="c-date" name="ご利用日"
+                     class="form-input w-full bg-dark-4 border border-gold/20 rounded text-gray-200 text-sm px-4 py-3 focus:outline-none focus:border-gold transition-colors">
+              <p id="c-date-error" class="hidden text-red-400 text-xs mt-1.5"></p>
+            </div>
+            <div>
+              <label for="c-time" class="block text-gold text-xs tracking-widest mb-2">ご利用時間</label>
+              <select id="c-time" name="ご利用時間"
+                      class="form-input w-full bg-dark-4 border border-gold/20 rounded text-gray-200 text-sm px-4 py-3 focus:outline-none focus:border-gold transition-colors">
+                <option value="">ご選択ください</option>
+                <option value="17:00">17:00</option>
+                <option value="17:30">17:30</option>
+                <option value="18:00">18:00</option>
+                <option value="18:30">18:30</option>
+                <option value="19:00">19:00</option>
+                <option value="19:30">19:30</option>
+                <option value="20:00">20:00</option>
+                <option value="20:30">20:30</option>
+                <option value="21:00">21:00</option>
+                <option value="21:30">21:30</option>
+                <option value="22:00">22:00</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- ご利用人数 -->
+          <div>
+            <label for="c-guests" class="block text-gold text-xs tracking-widest mb-2">ご利用人数</label>
+            <select id="c-guests" name="ご利用人数"
+                    class="form-input w-full bg-dark-4 border border-gold/20 rounded text-gray-200 text-sm px-4 py-3 focus:outline-none focus:border-gold transition-colors">
+              <option value="">お選びください</option>
+              <option value="1">1名</option>
+              <option value="2">2名</option>
+              <option value="3">3名</option>
+              <option value="4">4名</option>
+              <option value="5">5名</option>
+              <option value="6">6名</option>
+              <option value="7">7名</option>
+              <option value="8">8名</option>
+              <option value="9">9名</option>
+              <option value="10">10名</option>
+              <option value="11">11名</option>
+              <option value="12">12名</option>
+              <option value="13">13名</option>
+              <option value="14">14名</option>
+              <option value="15">15名</option>
+              <option value="16">16名</option>
+              <option value="17">17名</option>
+              <option value="18">18名</option>
+              <option value="19">19名</option>
+              <option value="20">20名</option>
+            </select>
+            <p class="text-gray-600 text-xs mt-1.5">※ 8名以上のご利用はお電話にてご相談ください</p>
+          </div>
+
+          <!-- ご利用目的 -->
+          <div>
+            <p class="text-gold text-xs tracking-widest mb-3">ご利用目的</p>
+            <div class="flex flex-wrap gap-6">
+              <label class="flex items-center gap-2 cursor-pointer group">
+                <input type="radio" name="ご利用目的" value="接待" class="radio-gold">
+                <span class="text-gray-300 text-sm group-hover:text-gold transition-colors">接待</span>
+              </label>
+              <label class="flex items-center gap-2 cursor-pointer group">
+                <input type="radio" name="ご利用目的" value="記念日" class="radio-gold">
+                <span class="text-gray-300 text-sm group-hover:text-gold transition-colors">記念日</span>
+              </label>
+              <label class="flex items-center gap-2 cursor-pointer group">
+                <input type="radio" name="ご利用目的" value="家族" class="radio-gold">
+                <span class="text-gray-300 text-sm group-hover:text-gold transition-colors">家族</span>
+              </label>
+              <label class="flex items-center gap-2 cursor-pointer group">
+                <input type="radio" name="ご利用目的" value="採用問い合わせ" class="radio-gold">
+                <span class="text-gray-300 text-sm group-hover:text-gold transition-colors">採用問い合わせ</span>
+              </label>
+              <label class="flex items-center gap-2 cursor-pointer group">
+                <input type="radio" name="ご利用目的" value="その他" class="radio-gold">
+                <span class="text-gray-300 text-sm group-hover:text-gold transition-colors">その他</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- 個室希望 -->
+          <div>
+            <p class="text-gold text-xs tracking-widest mb-3">個室希望</p>
+            <div class="flex flex-wrap gap-6">
+              <label class="flex items-center gap-2 cursor-pointer group">
+                <input type="radio" name="個室希望" value="あり" class="radio-gold">
+                <span class="text-gray-300 text-sm group-hover:text-gold transition-colors">あり</span>
+              </label>
+              <label class="flex items-center gap-2 cursor-pointer group">
+                <input type="radio" name="個室希望" value="なし" class="radio-gold">
+                <span class="text-gray-300 text-sm group-hover:text-gold transition-colors">なし</span>
+              </label>
+              <label class="flex items-center gap-2 cursor-pointer group">
+                <input type="radio" name="個室希望" value="どちらでも" class="radio-gold" checked>
+                <span class="text-gray-300 text-sm group-hover:text-gold transition-colors">どちらでも</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- アレルギー・苦手な食材 -->
+          <div>
+            <label for="c-allergy" class="block text-gold text-xs tracking-widest mb-2">
+              アレルギー・苦手な食材・お問い合わせ内容
+              <span class="text-gray-500 text-xs font-normal ml-2">任意</span>
+            </label>
+            <textarea id="c-allergy" name="メッセージ" rows="4"
+                      placeholder="例：エビ・カニアレルギー、レバーが苦手　/ 採用についてのご質問など"
+                      class="form-input w-full bg-dark-4 border border-gold/20 rounded text-gray-200 text-sm px-4 py-3 placeholder-gray-600 focus:outline-none focus:border-gold transition-colors resize-none"></textarea>
+          </div>
+
+          <!-- エラーサマリー -->
+          <div id="form-error-summary" class="hidden border border-red-500/40 rounded p-4 bg-red-900/10">
+            <p class="text-red-400 text-xs">入力内容にご不備があります。各項目をご確認ください。</p>
+          </div>
+
+          <!-- 送信ボタン -->
+          <div class="pt-2">
+            <button type="submit" id="submit-btn"
+                    class="gold-btn w-full text-dark font-bold text-sm py-4 rounded tracking-widest shadow-lg">
+              送信する
+            </button>
+            <p class="text-gray-600 text-xs text-center mt-4 leading-relaxed">
+              ※ 送信後、確認メールをお送りします。1〜2営業日以内にご返信いたします。
+            </p>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- ===== Footer ===== -->
+  <footer class="bg-dark border-t border-gold/15 py-14 text-center">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-start gap-8 mb-10 text-left">
+        <div>
+          <p class="font-mincho text-2xl text-gold tracking-widest mb-1">和牛村上亭</p>
+          <p class="text-gray-500 text-xs tracking-wider mb-4">炭火焼肉 ／ 福岡市中央区</p>
+          <p class="text-gray-400 text-xs leading-relaxed">
+            〒810-0001<br>
+            福岡県福岡市中央区天神X-X-X<br>
+            TEL: 092-XXX-XXXX<br>
+            営業時間: 17:00〜23:00（月曜定休）
+          </p>
+          <!-- SNS -->
+          <div class="flex gap-4 mt-5">
+            <a href="#" class="w-8 h-8 border border-gold/30 rounded-full flex items-center justify-center
+                               hover:border-gold hover:bg-gold/10 transition-all" aria-label="Instagram">
+              <svg class="w-4 h-4 text-gold/70" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058
+                         1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664
+                         4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07
+                         -3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013
+                         -3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069
+                         4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014
+                         8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98
+                         C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618
+                         6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196
+                         -4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0
+                         100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406
+                         -11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-x-12 gap-y-2 text-xs">
+          <a href="#top"        class="text-gray-500 hover:text-gold transition-colors">TOP</a>
+          <a href="#news"       class="text-gray-500 hover:text-gold transition-colors">NEWS</a>
+          <a href="#story"      class="text-gray-500 hover:text-gold transition-colors">STORY</a>
+          <a href="#recruit"    class="text-gray-500 hover:text-gold transition-colors">RECRUIT</a>
+          <a href="#promise"    class="text-gray-500 hover:text-gold transition-colors">PROMISE</a>
+          <a href="#access"     class="text-gray-500 hover:text-gold transition-colors">SHOP</a>
+          <a href="#service"    class="text-gray-500 hover:text-gold transition-colors">SERVICE</a>
+          <a href="course.html" class="text-gray-500 hover:text-gold transition-colors">COURSE</a>
+          <a href="#contact"    class="text-gray-500 hover:text-gold transition-colors col-span-2">CONTACT</a>
+          <a href="#reserve" class="text-gold hover:text-gold-light transition-colors font-bold col-span-2">
+            → ご予約はこちら
+          </a>
+        </div>
+      </div>
+      <div class="border-t border-gold/10 pt-8">
+        <p class="text-gray-600 text-xs tracking-wider">
+          © 2025 炭火焼肉 和牛村上亭. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+  </script>
+
+  <script>
+    (function () {
+      var form    = document.getElementById('contact-form');
+      if (!form) return;
+      var thanks    = document.getElementById('form-thanks');
+      var submitBtn = document.getElementById('submit-btn');
+      var errSum    = document.getElementById('form-error-summary');
+
+      var dateInput = document.getElementById('c-date');
+      if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
+
+      function setErr(id, msg) {
+        var el  = document.getElementById(id + '-error');
+        var inp = document.getElementById(id);
+        if (el)  { el.textContent = msg; el.classList.remove('hidden'); }
+        if (inp) inp.classList.add('input-error');
+      }
+
+      function clearErr(id) {
+        var el  = document.getElementById(id + '-error');
+        var inp = document.getElementById(id);
+        if (el)  { el.textContent = ''; el.classList.add('hidden'); }
+        if (inp) inp.classList.remove('input-error');
+      }
+
+      function validateField(id) {
+        clearErr(id);
+        var inp = document.getElementById(id);
+        if (!inp) return true;
+        var val = inp.value.trim ? inp.value.trim() : inp.value;
+
+        if (id === 'c-name') {
+          if (!val) { setErr('c-name', 'お名前をご入力ください。'); return false; }
+
+        } else if (id === 'c-tel') {
+          if (!val) { setErr('c-tel', '電話番号をご入力ください。'); return false; }
+          var digits = val.replace(/[\-\(\)\+\s]/g, '');
+          if (!/^\d{10,11}$/.test(digits)) {
+            setErr('c-tel', '正しい電話番号の形式でご入力ください（例：090-1234-5678）。');
+            return false;
+          }
+
+        } else if (id === 'c-email') {
+          if (!val) { setErr('c-email', 'メールアドレスをご入力ください。'); return false; }
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
+            setErr('c-email', '正しいメールアドレスの形式でご入力ください。');
+            return false;
+          }
+
+        } else if (id === 'c-date') {
+          if (inp.value) {
+            var parts = inp.value.split('-');
+            var sel   = new Date(+parts[0], +parts[1] - 1, +parts[2]);
+            var today = new Date(); today.setHours(0, 0, 0, 0);
+            if (sel < today) {
+              setErr('c-date', '過去の日付はご選択いただけません。');
+              return false;
+            }
+          }
+        }
+        return true;
+      }
+
+      function validateAll() {
+        var ok = true;
+        ['c-name', 'c-tel', 'c-email', 'c-date'].forEach(function (id) {
+          if (!validateField(id)) ok = false;
+        });
+        return ok;
+      }
+
+      ['c-name', 'c-tel', 'c-email', 'c-date'].forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) el.addEventListener('blur', function () { validateField(id); });
+      });
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!validateAll()) {
+          errSum.classList.remove('hidden');
+          errSum.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          return;
+        }
+        errSum.classList.add('hidden');
+        submitBtn.disabled = true;
+        submitBtn.textContent = '送信中...';
+
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function (res) {
+          if (res.ok) {
+            try {
+              var fields = {};
+              new FormData(form).forEach(function (v, k) { fields[k] = v; });
+              fetch('/api/line-notify', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(fields),
+              }).catch(function () {});
+            } catch (e) {}
+
+            form.classList.add('hidden');
+            thanks.classList.remove('hidden');
+            setTimeout(function () { thanks.classList.add('visible'); }, 10);
+            thanks.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } else {
+            submitBtn.disabled = false;
+            submitBtn.textContent = '送信する';
+            alert('送信に失敗しました。しばらくしてから再度お試しください。');
+          }
+        }).catch(function () {
+          submitBtn.disabled = false;
+          submitBtn.textContent = '送信する';
+          alert('通信エラーが発生しました。ネットワーク接続をご確認の上、再度お試しください。');
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

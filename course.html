@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>コース料理 | 炭火焼肉 和牛村上亭</title>
+  <meta name="description" content="炭火焼肉 和牛村上亭のコース料理。飲み放題付きスタンダードコース6,500円〜8,000円。バズーカハラミ・炙り握りなど名物メニューが揃った全3コース。">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold:        '#c9a84c',
+            'gold-light':'#e8c97a',
+            'gold-dark': '#a8873a',
+            'dark':      '#1a1a1a',
+            'dark-2':    '#222222',
+            'dark-3':    '#2a2a2a',
+            'dark-4':    '#333333',
+          },
+          fontFamily: {
+            mincho: ['"Hiragino Mincho ProN"', '"Yu Mincho"', '"YuMincho"', 'Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'Yu Gothic', 'YuGothic', sans-serif;
+      background: #1a1a1a;
+      color: #e5e5e5;
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #1a1a1a; }
+    ::-webkit-scrollbar-thumb { background: #c9a84c; border-radius: 3px; }
+
+    .hero-bg {
+      background-image: url('https://images.unsplash.com/photo-1709433420612-8cad609df914?w=1920&h=600&fit=crop&auto=format&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .gold-btn {
+      background: linear-gradient(135deg, #c9a84c 0%, #e8c97a 50%, #c9a84c 100%);
+      background-size: 200% 100%;
+      transition: background-position 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .gold-btn:hover {
+      background-position: 100% 0;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(201,168,76,0.4);
+    }
+
+    .nav-link {
+      position: relative;
+      color: #d4d4d4;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      transition: color 0.2s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #c9a84c;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover { color: #c9a84c; }
+    .nav-link:hover::after { width: 100%; }
+
+    .section-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 16px auto 0;
+    }
+    .section-divider::before,
+    .section-divider::after {
+      content: '';
+      width: 40px;
+      height: 1px;
+      background: #c9a84c;
+    }
+    .section-divider-diamond {
+      width: 6px;
+      height: 6px;
+      background: #c9a84c;
+      transform: rotate(45deg);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .course-img-wrap { overflow: hidden; }
+    .course-img-wrap img { transition: transform 0.5s ease; }
+    .course-card:hover .course-img-wrap img { transform: scale(1.04); }
+
+    .menu-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(201,168,76,0.1);
+      font-size: 0.875rem;
+      color: #d4d4d4;
+      line-height: 1.6;
+    }
+    .menu-list li:last-child { border-bottom: none; }
+    .menu-list li::before {
+      content: '●';
+      color: #c9a84c;
+      font-size: 0.5rem;
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    .price-badge {
+      background: linear-gradient(135deg, #c9a84c, #e8c97a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .popular-badge {
+      background: linear-gradient(135deg, #c9a84c, #e8c97a);
+      color: #1a1a1a;
+      font-weight: bold;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      padding: 3px 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="fixed top-0 w-full z-50 bg-dark/95 backdrop-blur-sm border-b border-gold/20">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex flex-col leading-tight">
+        <span class="text-gold font-mincho text-xl tracking-widest">和牛村上亭</span>
+        <span class="text-gray-400 text-xs tracking-wider">炭火焼肉</span>
+      </a>
+      <div class="hidden md:flex items-center gap-7">
+        <a href="index.html#top"     class="nav-link">TOP</a>
+        <a href="index.html#story"   class="nav-link">STORY</a>
+        <a href="index.html#promise" class="nav-link">PROMISE</a>
+        <a href="index.html#service" class="nav-link">SERVICE</a>
+        <a href="index.html#news"    class="nav-link">NEWS</a>
+        <a href="index.html#recruit" class="nav-link">RECRUIT</a>
+        <a href="index.html#access"  class="nav-link">SHOP</a>
+      </div>
+      <a href="index.html#reserve"
+         class="gold-btn text-dark font-bold text-xs px-6 py-2.5 rounded tracking-widest">
+        ご予約
+      </a>
+    </div>
+  </nav>
+
+
+  <!-- ===== Hero ===== -->
+  <section class="hero-bg relative pt-14">
+    <div class="absolute inset-0 bg-dark/70"></div>
+    <div class="relative z-10 max-w-5xl mx-auto px-4 py-20 md:py-28">
+      <!-- パンくず -->
+      <nav class="flex items-center gap-2 text-xs text-gray-500 mb-8" aria-label="breadcrumb">
+        <a href="index.html" class="hover:text-gold transition-colors">TOP</a>
+        <span class="text-gold/40">›</span>
+        <span class="text-gray-400">コース料理</span>
+      </nav>
+
+      <p class="text-gold text-xs tracking-[0.4em] mb-4">COURSE MENU</p>
+      <h1 class="font-mincho text-4xl md:text-5xl text-white tracking-wider mb-4">
+        コース料理
+      </h1>
+      <div class="section-divider justify-start" style="margin: 0 0 24px;">
+        <div class="section-divider-diamond" style="margin: 0 12px;"></div>
+      </div>
+      <p class="text-gray-300 text-sm md:text-base leading-relaxed max-w-xl">
+        飲み放題付き全3コース。名物バズーカハラミや炙り握りなど、<br class="hidden md:block">
+        和牛村上亭自慢の逸品をたっぷりとご堪能ください。
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ===== Course List ===== -->
+  <section class="py-20 bg-dark-2">
+    <div class="max-w-5xl mx-auto px-4">
+
+      <!-- 注意書き -->
+      <p class="text-center text-gray-500 text-xs mb-14 tracking-wide">
+        ※ 表示価格はすべて税込・おひとり様料金です。飲み放題が含まれます。
+      </p>
+
+      <div class="space-y-16">
+
+        <!-- ===== Course 1: スタンダードコース ===== -->
+        <article class="fade-in course-card border border-gold/25 rounded overflow-hidden bg-dark-3">
+          <div class="flex flex-col lg:flex-row">
+
+            <!-- 画像 -->
+            <div class="course-img-wrap w-full lg:w-2/5 flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1773903390615-06e8fb34247e?w=640&h=480&fit=crop&auto=format&q=80"
+                   alt="スタンダードコース" class="w-full h-56 lg:h-full object-cover">
+            </div>
+
+            <!-- テキスト -->
+            <div class="flex-1 p-8 md:p-10 flex flex-col">
+              <div class="flex flex-wrap items-start justify-between gap-4 mb-5">
+                <div>
+                  <div class="flex items-center gap-3 mb-2">
+                    <span class="popular-badge rounded">人気No.1</span>
+                    <span class="text-gold text-xs tracking-widest">STANDARD COURSE</span>
+                  </div>
+                  <h2 class="font-mincho text-2xl md:text-3xl text-white tracking-wide">
+                    スタンダードコース
+                  </h2>
+                </div>
+                <div class="text-right">
+                  <p class="price-badge font-mincho text-4xl font-bold leading-none">¥8,000</p>
+                  <p class="text-gray-500 text-xs mt-1">税込 / おひとり様</p>
+                </div>
+              </div>
+
+              <div class="w-full h-px bg-gold/20 mb-5"></div>
+
+              <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                リピート率150%◆名物バズーカハラミなど<span class="text-gold">衝撃のコスパ◎</span>な飲み放題付きコース。
+                和牛村上亭に来たら外せない一番人気の全品コースです。
+              </p>
+
+              <ul class="menu-list flex-1">
+                <li>飲み放題付</li>
+                <li>チョレギサラダ</li>
+                <li>ナムル盛り</li>
+                <li>白菜キムチ</li>
+                <li>バズーカタン塩</li>
+                <li>特撰赤身3種</li>
+                <li><span class="text-gold font-bold">バズーカハラミ</span>（名物）</li>
+                <li>ホルモン3種盛り</li>
+                <li>ご飯もの — 冷麺・クッパ・各種スープより1品</li>
+              </ul>
+
+              <div class="mt-8">
+                <a href="index.html#reserve"
+                   class="gold-btn inline-block text-dark font-bold text-sm px-10 py-4 rounded tracking-widest shadow-lg">
+                  このコースで予約する
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- ===== Course 2: スタンダードのその先 ===== -->
+        <article class="fade-in course-card border border-gold/20 rounded overflow-hidden bg-dark-3">
+          <div class="flex flex-col lg:flex-row-reverse">
+
+            <!-- 画像 -->
+            <div class="course-img-wrap w-full lg:w-2/5 flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1616627052149-22c4f8a6316e?w=640&h=480&fit=crop&auto=format&q=80"
+                   alt="スタンダードのその先" class="w-full h-56 lg:h-full object-cover">
+            </div>
+
+            <!-- テキスト -->
+            <div class="flex-1 p-8 md:p-10 flex flex-col">
+              <div class="flex flex-wrap items-start justify-between gap-4 mb-5">
+                <div>
+                  <p class="text-gold text-xs tracking-widest mb-2">PREMIUM COURSE</p>
+                  <h2 class="font-mincho text-2xl md:text-3xl text-white tracking-wide">
+                    スタンダードのその先
+                  </h2>
+                </div>
+                <div class="text-right">
+                  <p class="price-badge font-mincho text-4xl font-bold leading-none">¥7,000</p>
+                  <p class="text-gray-500 text-xs mt-1">税込 / おひとり様</p>
+                </div>
+              </div>
+
+              <div class="w-full h-px bg-gold/20 mb-5"></div>
+
+              <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                焼肉好きには衝撃のコスパ！◆自慢の<span class="text-gold">炙り握り</span>や名物<span class="text-gold">冷麺</span>で〆る飲み放題付きコース。
+                締めまでこだわりたい方に特におすすめです。
+              </p>
+
+              <ul class="menu-list flex-1">
+                <li>飲み放題付</li>
+                <li>チョレギサラダ</li>
+                <li>ナムル盛り</li>
+                <li>白菜キムチ</li>
+                <li><span class="text-gold font-bold">炙り握り</span>（自慢の一品）</li>
+                <li>至極のタン塩</li>
+                <li>渾身の赤身3種</li>
+                <li>バズーカハラミ</li>
+                <li>ホルモン3種盛り</li>
+                <li>ご飯もの — 冷麺・クッパ・各種スープより1品</li>
+              </ul>
+
+              <div class="mt-8">
+                <a href="index.html#reserve"
+                   class="inline-block border border-gold text-gold font-bold text-sm px-10 py-4 rounded
+                          tracking-widest hover:bg-gold/10 transition-colors">
+                  このコースで予約する
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- ===== Course 3: スタンダードその前 ===== -->
+        <article class="fade-in course-card border border-gold/20 rounded overflow-hidden bg-dark-3">
+          <div class="flex flex-col lg:flex-row">
+
+            <!-- 画像 -->
+            <div class="course-img-wrap w-full lg:w-2/5 flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1677029969065-c9f4003a9ad5?w=640&h=480&fit=crop&auto=format&q=80"
+                   alt="スタンダードその前" class="w-full h-56 lg:h-full object-cover">
+            </div>
+
+            <!-- テキスト -->
+            <div class="flex-1 p-8 md:p-10 flex flex-col">
+              <div class="flex flex-wrap items-start justify-between gap-4 mb-5">
+                <div>
+                  <p class="text-gold text-xs tracking-widest mb-2">LIGHT COURSE</p>
+                  <h2 class="font-mincho text-2xl md:text-3xl text-white tracking-wide">
+                    スタンダードその前
+                  </h2>
+                </div>
+                <div class="text-right">
+                  <p class="price-badge font-mincho text-4xl font-bold leading-none">¥6,500</p>
+                  <p class="text-gray-500 text-xs mt-1">税込 / おひとり様</p>
+                </div>
+              </div>
+
+              <div class="w-full h-px bg-gold/20 mb-5"></div>
+
+              <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                女子会や追加注文したい方におすすめ◆特選赤身など<span class="text-gold">全7品のお気軽コース</span>（飲み放題付き）。
+                二次会前や軽めにご利用の方に最適です。
+              </p>
+
+              <ul class="menu-list flex-1">
+                <li>飲み放題付き</li>
+                <li>チョレギサラダ</li>
+                <li>ナムル盛り</li>
+                <li>バズーカタン塩</li>
+                <li>特撰赤身2種</li>
+                <li>バズーカハラミ</li>
+                <li>ご飯もの — クッパ・各種スープより1品</li>
+              </ul>
+
+              <div class="mt-8">
+                <a href="index.html#reserve"
+                   class="inline-block border border-gold text-gold font-bold text-sm px-10 py-4 rounded
+                          tracking-widest hover:bg-gold/10 transition-colors">
+                  このコースで予約する
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /space-y-16 -->
+    </div>
+  </section>
+
+
+  <!-- ===== 飲み放題案内 ===== -->
+  <section class="py-16 bg-dark">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="fade-in border border-gold/20 rounded bg-dark-3 p-8 md:p-10">
+        <p class="text-gold text-xs tracking-[0.4em] mb-4">ALL YOU CAN DRINK</p>
+        <h3 class="font-mincho text-xl md:text-2xl text-white mb-6 tracking-wide">飲み放題について</h3>
+        <div class="w-8 h-px bg-gold/40 mb-6"></div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm text-gray-400 leading-relaxed">
+          <div>
+            <p class="text-gold text-xs tracking-widest mb-3">ドリンクメニュー（一例）</p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gold flex-shrink-0"></span>生ビール</li>
+              <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gold flex-shrink-0"></span>ハイボール各種</li>
+              <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gold flex-shrink-0"></span>サワー各種</li>
+              <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gold flex-shrink-0"></span>カクテル各種</li>
+              <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gold flex-shrink-0"></span>ソフトドリンク各種</li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-gold text-xs tracking-widest mb-3">ご注意</p>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-gold flex-shrink-0 mt-1.5"></span>飲み放題は120分制です</li>
+              <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-gold flex-shrink-0 mt-1.5"></span>ラストオーダーは終了30分前</li>
+              <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-gold flex-shrink-0 mt-1.5"></span>未成年の方はソフトドリンクのみ</li>
+              <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-gold flex-shrink-0 mt-1.5"></span>席は最低2名様よりご予約可</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 予約CTA ===== -->
+  <section class="py-20 bg-dark-2 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-0 left-1/3 w-80 h-80 rounded-full bg-gold"></div>
+      <div class="absolute bottom-0 right-1/4 w-56 h-56 rounded-full bg-gold"></div>
+    </div>
+    <div class="absolute inset-6 md:inset-12 border border-gold/10 pointer-events-none"></div>
+
+    <div class="relative z-10 text-center px-4">
+      <div class="fade-in">
+        <p class="text-gold text-xs tracking-[0.4em] mb-4">RESERVATION</p>
+        <h2 class="font-mincho text-2xl md:text-4xl text-white mb-4 tracking-wider">
+          コースでのご予約はこちら
+        </h2>
+        <p class="text-gray-400 text-sm mb-10">お電話またはフォームより承っております。</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:092-XXX-XXXX"
+             class="flex items-center justify-center gap-3 bg-dark-3 border border-gold text-gold
+                    font-bold text-lg px-10 py-4 rounded hover:bg-gold/10 transition-all shadow-xl">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037
+                       11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1
+                       1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+            </svg>
+            092-XXX-XXXX
+          </a>
+          <a href="index.html#reserve"
+             class="gold-btn text-dark font-bold text-base px-10 py-4 rounded tracking-widest shadow-xl">
+            ネット予約・お問い合わせ
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== Footer ===== -->
+  <footer class="bg-dark border-t border-gold/15 py-12 text-center">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-start gap-8 mb-10 text-left">
+        <div>
+          <p class="font-mincho text-2xl text-gold tracking-widest mb-1">和牛村上亭</p>
+          <p class="text-gray-500 text-xs tracking-wider mb-4">炭火焼肉 ／ 福岡市中央区</p>
+          <p class="text-gray-400 text-xs leading-relaxed">
+            〒810-0001<br>
+            福岡県福岡市中央区天神X-X-X<br>
+            TEL: 092-XXX-XXXX<br>
+            営業時間: 17:00〜23:00（月曜定休）
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-x-12 gap-y-2 text-xs">
+          <a href="index.html#top"     class="text-gray-500 hover:text-gold transition-colors">TOP</a>
+          <a href="index.html#news"    class="text-gray-500 hover:text-gold transition-colors">NEWS</a>
+          <a href="index.html#story"   class="text-gray-500 hover:text-gold transition-colors">STORY</a>
+          <a href="index.html#recruit" class="text-gray-500 hover:text-gold transition-colors">RECRUIT</a>
+          <a href="index.html#promise" class="text-gray-500 hover:text-gold transition-colors">PROMISE</a>
+          <a href="index.html#access"  class="text-gray-500 hover:text-gold transition-colors">SHOP</a>
+          <a href="index.html#service" class="text-gray-500 hover:text-gold transition-colors">SERVICE</a>
+          <a href="index.html#contact" class="text-gray-500 hover:text-gold transition-colors">CONTACT</a>
+          <a href="index.html#reserve" class="text-gold hover:text-gold-light transition-colors font-bold col-span-2">
+            → ご予約はこちら
+          </a>
+        </div>
+      </div>
+      <div class="border-t border-gold/10 pt-8">
+        <p class="text-gray-600 text-xs tracking-wider">
+          © 2025 炭火焼肉 和牛村上亭. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+  </script>
+
+</body>
+</html>
